@@ -1,1 +1,1 @@
-# Esercizi con gliEmbedded
+# Esercizi con gli Embedded
