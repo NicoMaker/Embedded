@@ -30,7 +30,7 @@ void main(void) {
         __delay_ms(1000);
     }
 
-    return;
+       return;
 }
 
 void initUART(long int baudRate) {
