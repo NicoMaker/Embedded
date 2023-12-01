@@ -1917,28 +1917,54 @@ extern __bank0 __bit __timeout;
 
 
 void initUART(long int);
+void SendUARTString(char *);
 
 void main(void) {
 
     initUART(9600);
+    TRISD = 0x00;
 
-    while(1)
-    {
-        TXREG = 'c';
+    while (1) {
+        SendUARTString("ciao");
         _delay((unsigned long)((1000)*(8000000/4000.0)));
     }
 
     return;
 }
 
-void initUART(long int baudRate)
-{
-   TRISCbits.TRISC7 = 1;
-   TRISCbits.TRISC6 = 0;
+void initUART(long int baudRate) {
+    TRISCbits.TRISC7 = 1;
+    TRISCbits.TRISC6 = 0;
 
-   TXSTAbits.TXEN = 1;
-   RCSTAbits.SPEN = 1;
-   RCSTA |= 0x90;
-   SPBRG = (8000000/(long)(64UL*baudRate))-1;
+    TXSTAbits.TXEN = 1;
+    RCSTAbits.SPEN = 1;
+    RCSTAbits.CREN = 1;
+    SPBRG = (8000000 / (long) (64UL * baudRate)) - 1;
+
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.RCIE = 1;
+}
+
+void SendUARTString(char *str) {
+    int i = 0;
+
+    while (str[i] != '\0') {
+
+        while (!PIR1bits.TXIF);
+        TXREG = str[i];
+        i++;
+    }
+}
+
+void __attribute__((picinterrupt(("")))) ISR() {
+    if (RCIF) {
+        TXREG = RCREG;
+        RCIF = 0;
+    }
+
+
+
+
 
 }

@@ -18,54 +18,46 @@
 #include <xc.h>
 
 void initUART(long int);
-void SendUARTString(char *);
 
 void main(void) {
-
+    
     initUART(9600);
     TRISD = 0x00;
-
-    while (1) {
-        SendUARTString("ciao");
+    
+    while(1)
+    {
+        TXREG = 'c'; // in automatico trasmette 
         __delay_ms(1000);
-    }
-
+    } 
+    
     return;
 }
 
-void initUART(long int baudRate) {
-    TRISCbits.TRISC7 = 1; // impongo input RX
-    TRISCbits.TRISC6 = 0; // impongo output TX
+void initUART(long int baudRate)
+{
+   TRISCbits.TRISC7 = 1; // impongo input RX
+   TRISCbits.TRISC6 = 0;  // impongo output TX
+   
+   TXSTAbits.TXEN = 1; //abilito sottomodulo di TX
+   RCSTAbits.SPEN = 1; // abilito il modulo UART
+   RCSTAbits.CREN = 1; // abilito il ricevimento continuo dei dati
+   SPBRG = (_XTAL_FREQ/(long)(64UL*baudRate))-1; // uso variabile del calcolo senza segno UL
 
-    TXSTAbits.TXEN = 1; //abilito sottomodulo di TX
-    RCSTAbits.SPEN = 1; // abilito il modulo UART
-    RCSTAbits.CREN = 1; // abilito il ricevimento continuo dei dati
-    SPBRG = (_XTAL_FREQ / (long) (64UL * baudRate)) - 1; // uso variabile del calcolo senza segno UL
-
-    INTCONbits.GIE = 1; // abilito gli interrupt
-    INTCONbits.PEIE = 1; // abilito gli interrupt periferichi
-    PIE1bits.RCIE = 1; // abilito gli interrupt dlla trasmisione seriale
+   INTCONbits.GIE = 1; // abilito gli interrupt
+   INTCONbits.PEIE = 1; // abilito gli interrupt periferichi
+   PIE1bits.RCIE = 1; // abilito gli interrupt dlla trasmisione seriale
 }
 
-void SendUARTString(char *str) {
-    int i = 0;
-
-    while (str[i] != '\0') {
-
-        while (!PIR1bits.TXIF); // TXIF -> 1 trasmissione 0 -> non trasmetto
-        TXREG = str[i]; // stampo un carattere alla volta tutte la stringa
-        i++;
-    }
-}
-
-void __interrupt() ISR() {
-    if (RCIF) {
-        TXREG = RCREG;
+void __interrupt() ISR()
+{
+    if(RCIF)
+    {
+        PORTD = RCREG;
         RCIF = 0; // importante se no se no si ricrea output
     }
 
-    //    if(T0IF)
-    //    {
-    //        T0IF = 0;
-    //    }    
+//    if(T0IF)
+//    {
+//        T0IF = 0;
+//    }    
 }
