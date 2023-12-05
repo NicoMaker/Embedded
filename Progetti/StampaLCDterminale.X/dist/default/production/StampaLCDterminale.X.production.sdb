@@ -1,0 +1,115 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16LF877A ]
+[d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"49 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\StampaLCDterminale.X\newmain.c
+[v _main main `(v  1 e 1 0 ]
+"67
+[v _initLCD initLCD `(v  1 e 1 0 ]
+"90
+[v _initUart initUart `(v  1 e 1 0 ]
+"104
+[v _sendLCD sendLCD `(v  1 e 1 0 ]
+"133
+[v _printStringLCD printStringLCD `(v  1 e 1 0 ]
+"143
+[v _ISR ISR `II(v  1 e 1 0 ]
+"340 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+[s S38 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+]
+"414
+[u S42 . 1 `S38 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES42  1 e 1 @9 ]
+"454
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"964
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+"1066
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1561
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"1618
+[v _PIE1 PIE1 `VEuc  1 e 1 @140 ]
+"1999
+[v _TXSTA TXSTA `VEuc  1 e 1 @152 ]
+"2080
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2747
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"46 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\StampaLCDterminale.X\newmain.c
+[v _string string `[10]uc  1 e 10 0 ]
+"47
+[v _index index `uc  1 e 1 0 ]
+[v _endSend endSend `uc  1 e 1 0 ]
+"49
+[v _main main `(v  1 e 1 0 ]
+{
+"65
+} 0
+"133
+[v _printStringLCD printStringLCD `(v  1 e 1 0 ]
+{
+[v printStringLCD@s s `*.24uc  1 a 1 wreg ]
+"134
+[v printStringLCD@i i `uc  1 a 1 2 ]
+"133
+[v printStringLCD@s s `*.24uc  1 a 1 wreg ]
+[v printStringLCD@s s `*.24uc  1 a 1 1 ]
+"141
+} 0
+"90
+[v _initUart initUart `(v  1 e 1 0 ]
+{
+[v initUart@baudRate baudRate `l  1 p 4 14 ]
+"102
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 10 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 9 ]
+[v ___aldiv@counter counter `uc  1 a 1 8 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"41
+} 0
+"67 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\StampaLCDterminale.X\newmain.c
+[v _initLCD initLCD `(v  1 e 1 0 ]
+{
+"89
+} 0
+"104
+[v _sendLCD sendLCD `(v  1 e 1 0 ]
+{
+[v sendLCD@dato dato `uc  1 a 1 wreg ]
+[v sendLCD@dato dato `uc  1 a 1 wreg ]
+[v sendLCD@rs rs `uc  1 p 1 4 ]
+[v sendLCD@dato dato `uc  1 a 1 0 ]
+"114
+} 0
+"143
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"155
+} 0
