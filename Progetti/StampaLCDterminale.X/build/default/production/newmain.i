@@ -1933,9 +1933,11 @@ void main(void) {
     {
         if(endSend)
         {
+            result = SumNumberFromString(string);
 
 
-            printStringLCD("ciao");
+            printStringLCD(string);
+
 
             endSend = 0;
             index = 0;
@@ -2016,7 +2018,7 @@ void printStringLCD(char *s) {
     }
 
     sendLCD('=', 1);
-
+    sendLCD('0'+result , 1);
 }
 
 void __attribute__((picinterrupt(("")))) ISR() {

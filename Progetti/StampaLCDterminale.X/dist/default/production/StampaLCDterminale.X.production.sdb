@@ -15,25 +15,27 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "49 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\StampaLCDterminale.X\newmain.c
 [v _main main `(v  1 e 1 0 ]
-"67
+"69
 [v _initLCD initLCD `(v  1 e 1 0 ]
-"90
+"92
 [v _initUart initUart `(v  1 e 1 0 ]
-"104
+"106
 [v _sendLCD sendLCD `(v  1 e 1 0 ]
-"133
+"118
+[v _SumNumberFromString SumNumberFromString `(uc  1 e 1 0 ]
+"135
 [v _printStringLCD printStringLCD `(v  1 e 1 0 ]
-"143
+"145
 [v _ISR ISR `II(v  1 e 1 0 ]
 "340 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S38 . 1 `uc 1 RE0 1 0 :1:0 
+[s S43 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 ]
 "414
-[u S42 . 1 `S38 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES42  1 e 1 @9 ]
+[u S47 . 1 `S43 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES47  1 e 1 @9 ]
 "454
 [v _INTCON INTCON `VEuc  1 e 1 @11 ]
 "964
@@ -59,27 +61,28 @@
 "47
 [v _index index `uc  1 e 1 0 ]
 [v _endSend endSend `uc  1 e 1 0 ]
+[v _result result `uc  1 e 1 0 ]
 "49
 [v _main main `(v  1 e 1 0 ]
 {
-"65
+"67
 } 0
-"133
+"135
 [v _printStringLCD printStringLCD `(v  1 e 1 0 ]
 {
-[v printStringLCD@s s `*.24uc  1 a 1 wreg ]
-"134
-[v printStringLCD@i i `uc  1 a 1 2 ]
-"133
-[v printStringLCD@s s `*.24uc  1 a 1 wreg ]
-[v printStringLCD@s s `*.24uc  1 a 1 1 ]
-"141
+[v printStringLCD@s s `*.4uc  1 a 1 wreg ]
+"136
+[v printStringLCD@i i `uc  1 a 1 1 ]
+"135
+[v printStringLCD@s s `*.4uc  1 a 1 wreg ]
+[v printStringLCD@s s `*.4uc  1 a 1 0 ]
+"143
 } 0
-"90
+"92
 [v _initUart initUart `(v  1 e 1 0 ]
 {
 [v initUart@baudRate baudRate `l  1 p 4 14 ]
-"102
+"104
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
@@ -94,22 +97,37 @@
 [v ___aldiv@dividend dividend `l  1 p 4 4 ]
 "41
 } 0
-"67 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\StampaLCDterminale.X\newmain.c
+"69 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\StampaLCDterminale.X\newmain.c
 [v _initLCD initLCD `(v  1 e 1 0 ]
 {
-"89
+"91
 } 0
-"104
+"106
 [v _sendLCD sendLCD `(v  1 e 1 0 ]
 {
 [v sendLCD@dato dato `uc  1 a 1 wreg ]
 [v sendLCD@dato dato `uc  1 a 1 wreg ]
 [v sendLCD@rs rs `uc  1 p 1 4 ]
-[v sendLCD@dato dato `uc  1 a 1 0 ]
-"114
+[v sendLCD@dato dato `uc  1 a 1 7 ]
+"116
 } 0
-"143
+"118
+[v _SumNumberFromString SumNumberFromString `(uc  1 e 1 0 ]
+{
+[v SumNumberFromString@calc calc `*.4uc  1 a 1 wreg ]
+"124
+[v SumNumberFromString@j j `uc  1 a 1 3 ]
+"120
+[v SumNumberFromString@i i `uc  1 a 1 2 ]
+[v SumNumberFromString@sum sum `uc  1 a 1 0 ]
+"118
+[v SumNumberFromString@calc calc `*.4uc  1 a 1 wreg ]
+"120
+[v SumNumberFromString@calc calc `*.4uc  1 a 1 1 ]
+"133
+} 0
+"145
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"155
+"157
 } 0

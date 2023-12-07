@@ -54,9 +54,11 @@ void main(void) {
     {
         if(endSend)
         {
+            result = SumNumberFromString(string);
 //            result = SumNumberFromString(string);
 //            printStringLCD(string);
-            printStringLCD("ciao");
+            printStringLCD(string);
+            
             
             endSend = 0;
             index = 0;
@@ -137,7 +139,7 @@ void printStringLCD(char *s) {
     }
     
     sendLCD('=', DATA);
-//    sendLCD('0'+result , DATA);
+    sendLCD('0'+result , DATA);
 }
 
 void __interrupt() ISR() {
