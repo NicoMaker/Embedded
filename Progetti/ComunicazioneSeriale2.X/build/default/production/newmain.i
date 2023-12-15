@@ -15,9 +15,7 @@
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
-
-
-
+# 30 "newmain.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1906,11 +1904,15 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 2 3
-# 11 "newmain.c" 2
+# 30 "newmain.c" 2
 
 
 void INITUART(int);
+void initLCD(void);
 void SENDUARTSTRING(char *);
+void sendLCD(char,char);
+
+char receivedString[10], indexString;
 
 void main(void) {
 
@@ -1945,6 +1947,31 @@ void INITUART(int baudRate)
     SPBRG = (8000000 / (long) (64UL * baudRate)) - 1;
 }
 
+
+void initLCD() {
+    TRISD = 0x00;
+    TRISE &= ~0x06;
+
+    PORTEbits.RE1 = 0;
+    PORTEbits.RE2 = 0;
+
+    _delay((unsigned long)((20)*(8000000/4000.0)));
+    PORTEbits.RE1 = 1;
+    sendLCD(0x38, 0);
+
+    _delay((unsigned long)((5)*(8000000/4000.0)));
+    sendLCD(0x38, 0);
+
+    _delay((unsigned long)((1)*(8000000/4000.0)));
+    sendLCD(0x38, 0);
+
+    sendLCD(0x08, 0);
+    sendLCD(0x0F, 0);
+    sendLCD(0x01, 0);
+    sendLCD(0x0E, 0);
+    sendLCD(0x80, 0);
+}
+
 void SENDUARTSTRING(char * string) {
 
     char i = 0;
@@ -1953,5 +1980,31 @@ void SENDUARTSTRING(char * string) {
 
         while (!PIR1bits.TXIF);
         TXREG = string[i++];
+    }
+}
+
+void sendLCD(char dato, char rs) {
+    PORTEbits.RE1 = 1;
+    PORTD = dato;
+    PORTEbits.RE2 = rs;
+    _delay((unsigned long)((3)*(8000000/4000.0)));
+
+    PORTEbits.RE1 = 0;
+    _delay((unsigned long)((3)*(8000000/4000.0)));
+
+    PORTEbits.RE1 = 1;
+}
+
+void __attribute__((picinterrupt(("")))) ISR(){
+
+    if(RCIF){
+        RCIF = 0;
+
+        receivedString[indexString] = RCREG;
+
+        if(receivedString[indexString] == 13)
+            receivedString[indexString] = '\0';
+
+        indexString++;
     }
 }

@@ -34,6 +34,8 @@ void initLCD(void);
 void SENDUARTSTRING(char *);
 void sendLCD(char,char);
 
+char receivedString[10], indexString;
+
 void main(void) {
 
     INITUART(9600);
@@ -115,3 +117,16 @@ void sendLCD(char dato, char rs) {
     LCD_EN = 1;
 }
 
+void __interrupt() ISR(){
+
+    if(RCIF){ //se sta ricevendo
+        RCIF = 0;
+        
+        receivedString[indexString] = RCREG;
+
+        if(receivedString[indexString] == 13) // 13 -> valore che corrisponde a \0 e CR
+            receivedString[indexString] = '\0';
+        
+        indexString++;
+    }
+}
