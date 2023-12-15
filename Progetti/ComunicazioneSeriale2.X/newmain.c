@@ -33,23 +33,26 @@ void INITUART(int);
 void initLCD(void);
 void SENDUARTSTRING(char *);
 void sendLCD(char,char);
+void SENDLCDSTRING(char *);
 
 char receivedString[10], indexString, endReceive;
 
 void main(void) {
 
     INITUART(9600);
+    initLCD();
 
     while (1) {
         
         if(endReceive){
+            sendLCD(L_CLR, COMMAND); // pulisce il terminale
             SENDLCDSTRING(receivedString);
             endReceive = 0;
             indexString = 0;
         }
 
-        SENDUARTSTRING("ciao");
-        __delay_ms(1000);
+        // SENDUARTSTRING("ciao");
+        // __delay_ms(1000);
     }
 }
 
@@ -124,6 +127,14 @@ void sendLCD(char dato, char rs) {
     LCD_EN = 1;
 }
 
+void SENDLCDSTRING(char * string)
+{
+    char i = 0;
+    while(string[i] != '\0'){
+        sendLCD(string[i++], DATA);
+    }    
+}
+            
 void __interrupt() ISR(){
 
     if(RCIF){ //se sta ricevendo

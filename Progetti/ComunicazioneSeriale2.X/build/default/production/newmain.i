@@ -1911,16 +1911,26 @@ void INITUART(int);
 void initLCD(void);
 void SENDUARTSTRING(char *);
 void sendLCD(char,char);
+void SENDLCDSTRING(char *);
 
-char receivedString[10], indexString;
+char receivedString[10], indexString, endReceive;
 
 void main(void) {
 
     INITUART(9600);
+    initLCD();
 
     while (1) {
-        SENDUARTSTRING("ciao");
-        _delay((unsigned long)((1000)*(8000000/4000.0)));
+
+        if(endReceive){
+            sendLCD(0x01, 0);
+            SENDLCDSTRING(receivedString);
+            endReceive = 0;
+            indexString = 0;
+        }
+
+
+
     }
 }
 
@@ -1995,6 +2005,14 @@ void sendLCD(char dato, char rs) {
     PORTEbits.RE1 = 1;
 }
 
+void SENDLCDSTRING(char * string)
+{
+    char i = 0;
+    while(string[i] != '\0'){
+        sendLCD(string[i++], 1);
+    }
+}
+
 void __attribute__((picinterrupt(("")))) ISR(){
 
     if(RCIF){
@@ -2002,8 +2020,10 @@ void __attribute__((picinterrupt(("")))) ISR(){
 
         receivedString[indexString] = RCREG;
 
-        if(receivedString[indexString] == 13)
+        if(receivedString[indexString] == 13) {
             receivedString[indexString] = '\0';
+            endReceive = 1;
+        }
 
         indexString++;
     }

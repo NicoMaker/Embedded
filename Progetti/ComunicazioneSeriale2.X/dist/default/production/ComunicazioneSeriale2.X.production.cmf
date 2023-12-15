@@ -12,20 +12,20 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\ComunicazioneSeriale2.X.production.o
-cinit CODE 0 13 13 11 2 1
-text1 CODE 0 12D 12D 24 2 1
-text2 CODE 0 C1 C1 43 2 1
-text3 CODE 0 24 24 9D 2 1
-text4 CODE 0 104 104 29 2 1
-maintext CODE 0 151 151 23 2 1
-cstackCOMMON COMMON 1 70 70 9 1 1
-cstackBANK0 BANK0 1 20 20 13 1 1
+cinit CODE 0 13 13 12 2 1
+text1 CODE 0 C2 C2 62 2 1
+text2 CODE 0 1BE 1BE 24 2 1
+text3 CODE 0 1E2 1E2 24 2 1
+text4 CODE 0 124 124 43 2 1
+text5 CODE 0 25 25 9D 2 1
+text6 CODE 0 193 193 2B 2 1
+maintext CODE 0 167 167 2C 2 1
+cstackCOMMON COMMON 1 70 70 A 1 1
+cstackBANK0 BANK0 1 20 20 10 1 1
 intentry CODE 0 4 4 C 2 1
-bssBANK0 BANK0 1 33 33 A 1 1
-strings STRING 0 174 174 B 2 1
-bssCOMMON COMMON 1 79 79 1 1 1
+bssBANK0 BANK0 1 30 30 C 1 1
 config CONFIG 4 2007 2007 1 2 1
-$C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
+$C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 10 10 3 2 1
 config CONFIG 4 2007 2007 1 2 1
@@ -35,21 +35,21 @@ config CONFIG 4 2007 2007 1 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 3D-6F 1
+RAM 3C-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 3D-6F 1
+BANK0 3C-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 17F-1FFF 2
+CONST 206-1FFF 2
 ENTRY 3-3 2
-ENTRY 17F-1FFF 2
+ENTRY 206-1FFF 2
 IDLOC 2000-2003 2
 CODE 3-3 2
-CODE 17F-1FFF 2
+CODE 206-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -57,9 +57,9 @@ SFR3 180-18F 1
 COMMON 7A-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 17F-1FFF 2
+STRCODE 206-1FFF 2
 STRING 3-3 2
-STRING 17F-1FFF 2
+STRING 206-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -74,103 +74,136 @@ STRING 17F-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ComunicazioneSeriale2.X.production.o
-13 cinit CODE >411:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-13 cinit CODE >414:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-13 cinit CODE >431:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-14 cinit CODE >434:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-15 cinit CODE >435:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-16 cinit CODE >436:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-17 cinit CODE >437:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-18 cinit CODE >438:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-19 cinit CODE >439:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-1A cinit CODE >440:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-1B cinit CODE >441:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-1C cinit CODE >442:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-1D cinit CODE >443:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-1E cinit CODE >444:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-1F cinit CODE >445:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-20 cinit CODE >451:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-20 cinit CODE >453:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-21 cinit CODE >454:C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_1.s
-4 intentry CODE >120:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-104 text4 CODE >120:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-104 text4 CODE >122:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-10A text4 CODE >123:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-10B text4 CODE >125:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-111 text4 CODE >127:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-11A text4 CODE >128:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-11E text4 CODE >130:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-122 text4 CODE >132:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-24 text3 CODE >5:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-24 text3 CODE >13:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-27 text3 CODE >14:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-2B text3 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-30 text3 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-32 text3 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-34 text3 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-36 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-38 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-38 text3 CODE >18:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-3C text3 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-41 text3 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-43 text3 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-45 text3 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-47 text3 CODE >20:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-4B text3 CODE >22:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-53 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-57 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-5B text3 CODE >24:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-5D text3 CODE >25:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-5E text3 CODE >26:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-60 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-67 text3 CODE >27:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-6B text3 CODE >25:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-6F text3 CODE >30:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-71 text3 CODE >30:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-78 text3 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-7A text3 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-7E text3 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-82 text3 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-86 text3 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-8A text3 CODE >32:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-8D text3 CODE >32:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-91 text3 CODE >32:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-95 text3 CODE >32:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-98 text3 CODE >33:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-99 text3 CODE >35:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-9A text3 CODE >35:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-A0 text3 CODE >35:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-A2 text3 CODE >36:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-A8 text3 CODE >38:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-AD text3 CODE >39:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-B2 text3 CODE >39:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-B4 text3 CODE >39:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-B6 text3 CODE >39:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-B8 text3 CODE >40:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-C0 text3 CODE >41:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-C1 text2 CODE >49:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-C1 text2 CODE >51:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-C4 text2 CODE >52:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-C5 text2 CODE >58:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-C6 text2 CODE >64:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-CC text2 CODE >66:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-D0 text2 CODE >67:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-D3 text2 CODE >69:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-DF text2 CODE >69:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-E5 text2 CODE >69:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-103 text2 CODE >70:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-12D text1 CODE >97:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-12E text1 CODE >99:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-12F text1 CODE >101:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-130 text1 CODE >103:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-136 text1 CODE >104:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-143 text1 CODE >101:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-14C text1 CODE >101:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-150 text1 CODE >106:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-151 maintext CODE >39:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-151 maintext CODE >41:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-15C maintext CODE >44:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
-162 maintext CODE >45:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+13 cinit CODE >389:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+13 cinit CODE >392:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+13 cinit CODE >409:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+14 cinit CODE >410:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+15 cinit CODE >411:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+16 cinit CODE >412:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+17 cinit CODE >413:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+18 cinit CODE >414:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+19 cinit CODE >415:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+1A cinit CODE >416:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+1B cinit CODE >417:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+1C cinit CODE >418:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+1D cinit CODE >419:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+1E cinit CODE >420:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+1F cinit CODE >421:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+20 cinit CODE >422:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+21 cinit CODE >428:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+21 cinit CODE >430:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+22 cinit CODE >431:C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_1.s
+4 intentry CODE >138:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+193 text6 CODE >138:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+193 text6 CODE >140:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+199 text6 CODE >141:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+19A text6 CODE >143:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1A0 text6 CODE >145:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1A9 text6 CODE >146:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1AD text6 CODE >147:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1AF text6 CODE >150:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1B3 text6 CODE >152:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+25 text5 CODE >5:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+25 text5 CODE >13:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+28 text5 CODE >14:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+2C text5 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+31 text5 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+33 text5 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+35 text5 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+37 text5 CODE >16:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+39 text5 CODE >17:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+39 text5 CODE >18:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+3D text5 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+42 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+44 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+46 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+48 text5 CODE >20:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+4C text5 CODE >22:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+54 text5 CODE >23:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+58 text5 CODE >23:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+5C text5 CODE >24:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+5E text5 CODE >25:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+5F text5 CODE >26:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+61 text5 CODE >26:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+68 text5 CODE >27:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+6C text5 CODE >25:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+70 text5 CODE >30:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+72 text5 CODE >30:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+79 text5 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+7B text5 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+7F text5 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+83 text5 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+87 text5 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+8B text5 CODE >32:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+8E text5 CODE >32:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+92 text5 CODE >32:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+96 text5 CODE >32:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+99 text5 CODE >33:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+9A text5 CODE >35:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+9B text5 CODE >35:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+A1 text5 CODE >35:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+A3 text5 CODE >36:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+A9 text5 CODE >38:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+AE text5 CODE >39:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+B3 text5 CODE >39:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+B5 text5 CODE >39:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+B7 text5 CODE >39:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+B9 text5 CODE >40:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+C1 text5 CODE >41:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+124 text4 CODE >59:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+124 text4 CODE >61:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+127 text4 CODE >62:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+128 text4 CODE >68:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+129 text4 CODE >74:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+12F text4 CODE >76:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+133 text4 CODE >77:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+136 text4 CODE >79:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+142 text4 CODE >79:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+148 text4 CODE >79:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+166 text4 CODE >80:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1E2 text3 CODE >118:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1E3 text3 CODE >119:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1E6 text3 CODE >120:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1E8 text3 CODE >121:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1E9 text3 CODE >121:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1EB text3 CODE >121:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1ED text3 CODE >122:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1F6 text3 CODE >124:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1F9 text3 CODE >125:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+202 text3 CODE >127:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+205 text3 CODE >128:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1BE text2 CODE >130:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1C1 text2 CODE >132:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1C2 text2 CODE >133:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1C3 text2 CODE >134:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1D6 text2 CODE >133:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+1E1 text2 CODE >136:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+C2 text1 CODE >83:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+C2 text1 CODE >84:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+C5 text1 CODE >85:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+C9 text1 CODE >87:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+CC text1 CODE >88:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+CD text1 CODE >90:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+D6 text1 CODE >91:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+D9 text1 CODE >92:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+E0 text1 CODE >94:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+E9 text1 CODE >95:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+F0 text1 CODE >97:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+F9 text1 CODE >98:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+100 text1 CODE >100:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+107 text1 CODE >101:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+10E text1 CODE >102:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+115 text1 CODE >103:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+11C text1 CODE >104:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+123 text1 CODE >105:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+167 maintext CODE >40:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+167 maintext CODE >42:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+172 maintext CODE >43:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+177 maintext CODE >47:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+17E maintext CODE >48:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+185 maintext CODE >49:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+18B maintext CODE >50:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+18E maintext CODE >51:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -184,7 +217,7 @@ E5 text2 CODE >69:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSerial
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
-__Hspace_0 17F 0 ABS 0 - -
+__Hspace_0 206 0 ABS 0 - -
 __Hspace_1 7A 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
@@ -194,45 +227,46 @@ __L__absolute__ 0 0 ABS 0 __absolute__ -
 __Hstrings 0 0 ABS 0 strings -
 _PIE1 8C 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
 _RCIF 65 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-_main 2A2 0 CODE 0 maintext dist/default/production\ComunicazioneSeriale2.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+_main 2CE 0 CODE 0 maintext dist/default/production\ComunicazioneSeriale2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-___stack_lo 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-start 20 0 CODE 0 init C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-__HbssCOMMON 0 0 ABS 0 bssCOMMON -
-SENDUARTSTRING@i 75 0 COMMON 1 cstackCOMMON dist/default/production\ComunicazioneSeriale2.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+___stack_lo 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+start 20 0 CODE 0 init C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+sendLCD@dato 77 0 COMMON 1 cstackCOMMON dist/default/production\ComunicazioneSeriale2.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
 ___aldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
+SENDLCDSTRING@string 20 0 BANK0 1 cstackBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
 ___aldiv@sign 29 0 BANK0 1 cstackBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of___aldiv 182 0 CODE 0 text3 dist/default/production\ComunicazioneSeriale2.X.production.o
+__end_of___aldiv 184 0 CODE 0 text5 dist/default/production\ComunicazioneSeriale2.X.production.o
 _INTCON B 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-___stacklo 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
+___stackhi 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+sendLCD@rs 74 0 COMMON 1 cstackCOMMON dist/default/production\ComunicazioneSeriale2.X.production.o
+_SENDLCDSTRING 37C 0 CODE 0 text2 dist/default/production\ComunicazioneSeriale2.X.production.o
 start_initialization 26 0 CODE 0 cinit dist/default/production\ComunicazioneSeriale2.X.production.o
+__end_of_sendLCD 40C 0 CODE 0 text3 dist/default/production\ComunicazioneSeriale2.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
 ___aldiv@quotient 2A 0 BANK0 1 cstackBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
+__end_of_initLCD 248 0 CODE 0 text1 dist/default/production\ComunicazioneSeriale2.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
-__Hcinit 48 0 CODE 0 cinit -
-SENDUARTSTRING@string 74 0 COMMON 1 cstackCOMMON dist/default/production\ComunicazioneSeriale2.X.production.o
+__Hcinit 4A 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
-__stringbase 2F2 0 STRING 0 strings dist/default/production\ComunicazioneSeriale2.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4010 0 CONFIG 4 config -
@@ -263,63 +297,64 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_ISR 208 0 CODE 0 text4 dist/default/production\ComunicazioneSeriale2.X.production.o
-__S0 17F 0 ABS 0 - -
+_ISR 326 0 CODE 0 text6 dist/default/production\ComunicazioneSeriale2.X.production.o
+__S0 206 0 ABS 0 - -
 __S1 7A 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 saved_w 7E 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
-_indexString 79 0 COMMON 1 bssCOMMON dist/default/production\ComunicazioneSeriale2.X.production.o
-__end_of_ISR 25A 0 CODE 0 text4 dist/default/production\ComunicazioneSeriale2.X.production.o
+_indexString 31 0 BANK0 1 bssBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
+__end_of_ISR 37C 0 CODE 0 text6 dist/default/production\ComunicazioneSeriale2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-__stringtab 2E8 0 STRING 0 strings dist/default/production\ComunicazioneSeriale2.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-___aldiv 48 0 CODE 0 text3 dist/default/production\ComunicazioneSeriale2.X.production.o
-__pmaintext 2A2 0 CODE 0 maintext dist/default/production\ComunicazioneSeriale2.X.production.o
+__end_of_SENDLCDSTRING 3C4 0 CODE 0 text2 dist/default/production\ComunicazioneSeriale2.X.production.o
+___aldiv 4A 0 CODE 0 text5 dist/default/production\ComunicazioneSeriale2.X.production.o
+__pmaintext 2CE 0 CODE 0 maintext dist/default/production\ComunicazioneSeriale2.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_INITUART 182 0 CODE 0 text2 dist/default/production\ComunicazioneSeriale2.X.production.o
-__end_of__stringtab 2F4 0 STRING 0 strings dist/default/production\ComunicazioneSeriale2.X.production.o
+_INITUART 248 0 CODE 0 text4 dist/default/production\ComunicazioneSeriale2.X.production.o
+_sendLCD 3C4 0 CODE 0 text3 dist/default/production\ComunicazioneSeriale2.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 79 0 COMMON 1 bssCOMMON dist/default/production\ComunicazioneSeriale2.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 INITUART@baudRate 2E 0 BANK0 1 cstackBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
-__end_of_INITUART 208 0 CODE 0 text2 dist/default/production\ComunicazioneSeriale2.X.production.o
+__end_of_INITUART 2CE 0 CODE 0 text4 dist/default/production\ComunicazioneSeriale2.X.production.o
 _PIR1bits C 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
 __Lend_init 20 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 40 0 CODE 0 cinit dist/default/production\ComunicazioneSeriale2.X.production.o
+end_of_initialization 42 0 CODE 0 cinit dist/default/production\ComunicazioneSeriale2.X.production.o
 __Hintentry 20 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 ?___aldiv 20 0 BANK0 1 cstackBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-_SENDUARTSTRING 25A 0 CODE 0 text1 dist/default/production\ComunicazioneSeriale2.X.production.o
-__ptext1 25A 0 CODE 0 text1 dist/default/production\ComunicazioneSeriale2.X.production.o
-__ptext2 182 0 CODE 0 text2 dist/default/production\ComunicazioneSeriale2.X.production.o
-__ptext3 48 0 CODE 0 text3 dist/default/production\ComunicazioneSeriale2.X.production.o
-__ptext4 208 0 CODE 0 text4 dist/default/production\ComunicazioneSeriale2.X.production.o
+_initLCD 184 0 CODE 0 text1 dist/default/production\ComunicazioneSeriale2.X.production.o
+__ptext1 184 0 CODE 0 text1 dist/default/production\ComunicazioneSeriale2.X.production.o
+__ptext2 37C 0 CODE 0 text2 dist/default/production\ComunicazioneSeriale2.X.production.o
+__ptext3 3C4 0 CODE 0 text3 dist/default/production\ComunicazioneSeriale2.X.production.o
+__ptext4 248 0 CODE 0 text4 dist/default/production\ComunicazioneSeriale2.X.production.o
+__ptext5 4A 0 CODE 0 text5 dist/default/production\ComunicazioneSeriale2.X.production.o
+__ptext6 326 0 CODE 0 text6 dist/default/production\ComunicazioneSeriale2.X.production.o
 ___aldiv@dividend 24 0 BANK0 1 cstackBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __H__absolute__ 0 0 ABS 0 __absolute__ -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-___heap_hi 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-___heap_lo 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-__end_of__initialization 40 0 CODE 0 cinit dist/default/production\ComunicazioneSeriale2.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+___heap_lo 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+__end_of__initialization 42 0 CODE 0 cinit dist/default/production\ComunicazioneSeriale2.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-_receivedString 33 0 BANK0 1 bssBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
+_receivedString 32 0 BANK0 1 bssBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\ComunicazioneSeriale2.X.production.o
-__end_of_SENDUARTSTRING 2A2 0 CODE 0 text1 dist/default/production\ComunicazioneSeriale2.X.production.o
 _TXSTAbits 98 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
 __Hend_init 26 0 CODE 0 end_init -
 ___aldiv@counter 28 0 BANK0 1 cstackBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
-__end_of_main 2E8 0 CODE 0 maintext dist/default/production\ComunicazioneSeriale2.X.production.o
+__end_of_main 326 0 CODE 0 maintext dist/default/production\ComunicazioneSeriale2.X.production.o
+SENDLCDSTRING@i 21 0 BANK0 1 cstackBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
 _RCREG 1A 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
 _RCSTA 18 0 ABS 0 - dist/default/production\ComunicazioneSeriale2.X.production.o
@@ -331,11 +366,11 @@ __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\ComunicazioneSeriale2.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\ComunicazioneSeriale2.X.production.o
+_endReceive 30 0 BANK0 1 bssBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
 __initialization 26 0 CODE 0 cinit dist/default/production\ComunicazioneSeriale2.X.production.o
-__pbssBANK0 33 0 BANK0 1 bssBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
-__pstrings 2E8 0 STRING 0 strings dist/default/production\ComunicazioneSeriale2.X.production.o
-___int_stack_hi 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
-___int_stack_lo 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\driver_tmp_12.o
+__pbssBANK0 30 0 BANK0 1 bssBANK0 dist/default/production\ComunicazioneSeriale2.X.production.o
+___int_stack_hi 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
+___int_stack_lo 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsbq0.\driver_tmp_12.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -362,10 +397,9 @@ ___int_stack_lo 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs6d0.\dri
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cstackCOMMON 1 70 70 A 1
-cstackBANK0 1 20 20 1D 1
-intentry 0 4 8 170 2
+cstackBANK0 1 20 20 1C 1
+intentry 0 4 8 202 2
 reset_vec 0 0 0 3 2
-strings 0 174 2E8 B 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
