@@ -1,0 +1,110 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16LF877A ]
+[d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"16 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+[v _main main `(v  1 e 1 0 ]
+"26
+[v _INITUART INITUART `(v  1 e 1 0 ]
+"49
+[v _SENDUARTSTRING SENDUARTSTRING `(v  1 e 1 0 ]
+"454 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S100 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"549
+[u S109 . 1 `S100 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES109  1 e 1 @12 ]
+"964
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+"1059
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+[s S38 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1454
+[u S47 . 1 `S38 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES47  1 e 1 @135 ]
+"1618
+[v _PIE1 PIE1 `VEuc  1 e 1 @140 ]
+[s S59 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2025
+[s S68 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S72 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S75 . 1 `S59 1 . 1 0 `S68 1 . 1 0 `S72 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES75  1 e 1 @152 ]
+"2080
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"16 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\ComunicazioneSeriale2.X\newmain.c
+[v _main main `(v  1 e 1 0 ]
+{
+"24
+} 0
+"49
+[v _SENDUARTSTRING SENDUARTSTRING `(v  1 e 1 0 ]
+{
+[v SENDUARTSTRING@string string `*.24uc  1 a 1 wreg ]
+"51
+[v SENDUARTSTRING@i i `uc  1 a 1 1 ]
+"49
+[v SENDUARTSTRING@string string `*.24uc  1 a 1 wreg ]
+"51
+[v SENDUARTSTRING@string string `*.24uc  1 a 1 0 ]
+"58
+} 0
+"26
+[v _INITUART INITUART `(v  1 e 1 0 ]
+{
+[v INITUART@baudRate baudRate `i  1 p 2 6 ]
+"47
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 2 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 1 ]
+[v ___aldiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"41
+} 0
