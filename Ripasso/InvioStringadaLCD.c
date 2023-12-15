@@ -34,13 +34,20 @@ void initLCD(void);
 void SENDUARTSTRING(char *);
 void sendLCD(char,char);
 
-char receivedString[10], indexString;
+char receivedString[10], indexString, endReceive;
 
 void main(void) {
 
     INITUART(9600);
 
     while (1) {
+        
+        if(endReceive){
+            SENDLCDSTRING(receivedString);
+            endReceive = 0;
+            indexString = 0;
+        }
+
         SENDUARTSTRING("ciao");
         __delay_ms(1000);
     }
@@ -124,8 +131,10 @@ void __interrupt() ISR(){
         
         receivedString[indexString] = RCREG;
 
-        if(receivedString[indexString] == 13) // 13 -> valore che corrisponde a \0 e CR
+        if(receivedString[indexString] == 13) {// 13 -> valore che corrisponde a \0 e CR
             receivedString[indexString] = '\0';
+            endReceive = 1;
+        }    
         
         indexString++;
     }
