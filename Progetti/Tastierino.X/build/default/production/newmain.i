@@ -15,7 +15,9 @@
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
-# 30 "newmain.c"
+
+
+
 # 1 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1904,34 +1906,22 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 2 3
-# 30 "newmain.c" 2
+# 11 "newmain.c" 2
+
+
+const char ColomnConfig[3] = {
+    0xFE,
+    0xFD,
+    0xFB
+};
 
 
 void INITUART(long int);
-void initLCD(void);
+char BottonMatrix(void);
 void SENDUARTSTRING(char *);
-void sendLCD(char,char);
-void SENDLCDSTRING(char *);
-
-char receivedString[10], indexString, endReceive;
 
 void main(void) {
-
-    INITUART(9600);
-    initLCD();
-
-    while (1) {
-
-        if(endReceive){
-            sendLCD(0x01, 0);
-            SENDLCDSTRING(receivedString);
-            endReceive = 0;
-            indexString = 0;
-        }
-
-
-
-    }
+    return;
 }
 
 void INITUART(long int baudRate)
@@ -1957,29 +1947,25 @@ void INITUART(long int baudRate)
     SPBRG = (8000000 / (long) (64UL * baudRate)) - 1;
 }
 
+char BottonMatrix() {
 
-void initLCD() {
-    TRISD = 0x00;
-    TRISE &= ~0x06;
+    char k = 99;
 
-    PORTEbits.RE1 = 0;
-    PORTEbits.RE2 = 0;
+    TRISD = 0x0F;
+    TRISB &= ~0x07;
 
-    _delay((unsigned long)((20)*(8000000/4000.0)));
-    PORTEbits.RE1 = 1;
-    sendLCD(0x38, 0);
+    for (char col = 0; col < 3; col++) {
 
-    _delay((unsigned long)((5)*(8000000/4000.0)));
-    sendLCD(0x38, 0);
+        PORTB = ColomnConfig[col];
+        _delay((unsigned long)((500)*(8000000/4000000.0)));
 
-    _delay((unsigned long)((1)*(8000000/4000.0)));
-    sendLCD(0x38, 0);
+        char read = ~PORTD & TRISD;
 
-    sendLCD(0x08, 0);
-    sendLCD(0x0F, 0);
-    sendLCD(0x01, 0);
-    sendLCD(0x0E, 0);
-    sendLCD(0x80, 0);
+        for (char row = 0; row < 4; row++) {
+            if (read & (1 << row))
+                k = row + (col * 4);
+        }
+    }
 }
 
 void SENDUARTSTRING(char * string) {
@@ -1990,41 +1976,5 @@ void SENDUARTSTRING(char * string) {
 
         while (!PIR1bits.TXIF);
         TXREG = string[i++];
-    }
-}
-
-void sendLCD(char dato, char rs) {
-    PORTEbits.RE1 = 1;
-    PORTD = dato;
-    PORTEbits.RE2 = rs;
-    _delay((unsigned long)((3)*(8000000/4000.0)));
-
-    PORTEbits.RE1 = 0;
-    _delay((unsigned long)((3)*(8000000/4000.0)));
-
-    PORTEbits.RE1 = 1;
-}
-
-void SENDLCDSTRING(char * string)
-{
-    char i = 0;
-    while(string[i] != '\0'){
-        sendLCD(string[i++], 1);
-    }
-}
-
-void __attribute__((picinterrupt(("")))) ISR(){
-
-    if(RCIF){
-        RCIF = 0;
-
-        receivedString[indexString] = RCREG;
-
-        if(receivedString[indexString] == 13) {
-            receivedString[indexString] = '\0';
-            endReceive = 1;
-        }
-
-        indexString++;
     }
 }

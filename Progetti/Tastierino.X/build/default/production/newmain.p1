@@ -1,17 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"32 newmain.c
-[; ;newmain.c: 32: void INITUART(long int);
-[v _INITUART `(v ~T0 @X0 0 ef1`l ]
-"33
-[; ;newmain.c: 33: void initLCD(void);
-[v _initLCD `(v ~T0 @X0 0 ef ]
-"35
-[; ;newmain.c: 35: void sendLCD(char,char);
-[v _sendLCD `(v ~T0 @X0 0 ef2`uc`uc ]
-"36
-[; ;newmain.c: 36: void SENDLCDSTRING(char *);
-[v _SENDLCDSTRING `(v ~T0 @X0 0 ef1`*uc ]
 "1443 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 1443:     struct {
 [s S62 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -57,25 +45,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1499
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 1499: extern volatile unsigned char TRISD __attribute__((address(0x088)));
 [v _TRISD `Vuc ~T0 @X0 0 e@136 ]
-"1561
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 1561: extern volatile unsigned char TRISE __attribute__((address(0x089)));
-[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
-"408
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 408:     struct {
-[s S18 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S18 . RE0 RE1 RE2 ]
-"407
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 407: typedef union {
-[u S17 `S18 1 ]
-[n S17 . . ]
-"414
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 414: extern volatile PORTEbits_t PORTEbits __attribute__((address(0x009)));
-[v _PORTEbits `VS17 ~T0 @X0 0 e@9 ]
+"1375
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 1375: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"216
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 [v F164 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\builtins.h
 [v __delay `JF164 ~T0 @X0 0 e ]
 [p i __delay ]
-"538 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h
+"340 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 340: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"538
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 538:     struct {
 [s S25 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S25 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF PSPIF ]
@@ -89,18 +72,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1059
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 1059: extern volatile unsigned char TXREG __attribute__((address(0x019)));
 [v _TXREG `Vuc ~T0 @X0 0 e@25 ]
-"340
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 340: extern volatile unsigned char PORTD __attribute__((address(0x008)));
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
-[t ~ __interrupt . k ]
-[t T1 __interrupt ]
-"2747
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 2747: extern volatile __bit RCIF __attribute__((address(0x65)));
-[v _RCIF `Vb ~T0 @X0 0 e@101 ]
-"1066
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 1066: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
-[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
 "1 newmain.c
+[; ;newmain.c: 1: 
 [p x FOSC  =  HS         ]
 "2
 [p x WDTE  =  OFF        ]
@@ -296,301 +269,172 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"38 newmain.c
-[; ;newmain.c: 38: char receivedString[10], indexString, endReceive;
-[v _receivedString `uc ~T0 @X0 -> 10 `i e ]
-[v _indexString `uc ~T0 @X0 1 e ]
-[v _endReceive `uc ~T0 @X0 1 e ]
+"13 newmain.c
+[; ;newmain.c: 13: const char ColomnConfig[3] = {
+[v _ColomnConfig `Cuc ~T0 @X0 -> 3 `i e ]
+[i _ColomnConfig
+:U ..
+-> -> 254 `i `uc
+-> -> 253 `i `uc
+-> -> 251 `i `uc
+..
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"40
-[; ;newmain.c: 40: void main(void) {
+"24
+[; ;newmain.c: 24: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"42
-[; ;newmain.c: 42:     INITUART(9600);
-[e ( _INITUART (1 -> -> 9600 `i `l ]
-"43
-[; ;newmain.c: 43:     initLCD();
-[e ( _initLCD ..  ]
-"45
-[; ;newmain.c: 45:     while (1) {
-[e :U 101 ]
-{
-"47
-[; ;newmain.c: 47:         if(endReceive){
-[e $ ! != -> _endReceive `i -> 0 `i 103  ]
-{
-"48
-[; ;newmain.c: 48:             sendLCD(0x01, 0);
-[e ( _sendLCD (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-"49
-[; ;newmain.c: 49:             SENDLCDSTRING(receivedString);
-[e ( _SENDLCDSTRING (1 &U _receivedString ]
-"50
-[; ;newmain.c: 50:             endReceive = 0;
-[e = _endReceive -> -> 0 `i `uc ]
-"51
-[; ;newmain.c: 51:             indexString = 0;
-[e = _indexString -> -> 0 `i `uc ]
-"52
-[; ;newmain.c: 52:         }
-}
-[e :U 103 ]
-"56
-[; ;newmain.c: 56:     }
-}
-[e :U 100 ]
-[e $U 101  ]
-[e :U 102 ]
-"57
-[; ;newmain.c: 57: }
+"25
+[; ;newmain.c: 25:     return;
+[e $UE 99  ]
+"26
+[; ;newmain.c: 26: }
 [e :UE 99 ]
 }
-"59
-[; ;newmain.c: 59: void INITUART(long int baudRate)
+"28
+[; ;newmain.c: 28: void INITUART(long int baudRate)
 [v _INITUART `(v ~T0 @X0 1 ef1`l ]
-"60
-[; ;newmain.c: 60: {
+"29
+[; ;newmain.c: 29: {
 {
 [e :U _INITUART ]
-"59
-[; ;newmain.c: 59: void INITUART(long int baudRate)
+"28
+[; ;newmain.c: 28: void INITUART(long int baudRate)
 [v _baudRate `l ~T0 @X0 1 r1 ]
-"60
-[; ;newmain.c: 60: {
+"29
+[; ;newmain.c: 29: {
 [f ]
-"61
-[; ;newmain.c: 61:     TRISCbits.TRISC7 = 1;
+"30
+[; ;newmain.c: 30:     TRISCbits.TRISC7 = 1;
 [e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
-"62
-[; ;newmain.c: 62:     TRISCbits.TRISC6 = 0;
+"31
+[; ;newmain.c: 31:     TRISCbits.TRISC6 = 0;
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-"68
-[; ;newmain.c: 68:     TXSTAbits.TXEN = 1;
+"37
+[; ;newmain.c: 37:     TXSTAbits.TXEN = 1;
 [e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-"74
-[; ;newmain.c: 74:     RCSTA |= 0x90;
+"43
+[; ;newmain.c: 43:     RCSTA |= 0x90;
 [e =| _RCSTA -> -> 144 `i `Vuc ]
-"76
-[; ;newmain.c: 76:     INTCON |= 0xC0;
+"45
+[; ;newmain.c: 45:     INTCON |= 0xC0;
 [e =| _INTCON -> -> 192 `i `Vuc ]
-"77
-[; ;newmain.c: 77:     PIE1 |= 0x20;
+"46
+[; ;newmain.c: 46:     PIE1 |= 0x20;
 [e =| _PIE1 -> -> 32 `i `Vuc ]
-"79
-[; ;newmain.c: 79:     SPBRG = (8000000 / (long) (64UL * baudRate)) - 1;
+"48
+[; ;newmain.c: 48:     SPBRG = (8000000 / (long) (64UL * baudRate)) - 1;
 [e = _SPBRG -> - / -> 8000000 `l -> * -> 64 `ul -> _baudRate `ul `l -> -> 1 `i `l `uc ]
-"80
-[; ;newmain.c: 80: }
-[e :UE 104 ]
+"49
+[; ;newmain.c: 49: }
+[e :UE 100 ]
 }
-"83
-[; ;newmain.c: 83: void initLCD() {
-[v _initLCD `(v ~T0 @X0 1 ef ]
+"51
+[; ;newmain.c: 51: char BottonMatrix() {
+[v _BottonMatrix `(uc ~T0 @X0 1 ef ]
 {
-[e :U _initLCD ]
+[e :U _BottonMatrix ]
 [f ]
-"84
-[; ;newmain.c: 84:     TRISD = 0x00;
-[e = _TRISD -> -> 0 `i `uc ]
-"85
-[; ;newmain.c: 85:     TRISE &= ~0x06;
-[e =& _TRISE -> ~ -> 6 `i `Vuc ]
-"87
-[; ;newmain.c: 87:     PORTEbits.RE1 = 0;
-[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
-"88
-[; ;newmain.c: 88:     PORTEbits.RE2 = 0;
-[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
-"90
-[; ;newmain.c: 90:     _delay((unsigned long)((20)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"91
-[; ;newmain.c: 91:     PORTEbits.RE1 = 1;
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
-"92
-[; ;newmain.c: 92:     sendLCD(0x38, 0);
-[e ( _sendLCD (2 , -> -> 56 `i `uc -> -> 0 `i `uc ]
-"94
-[; ;newmain.c: 94:     _delay((unsigned long)((5)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"95
-[; ;newmain.c: 95:     sendLCD(0x38, 0);
-[e ( _sendLCD (2 , -> -> 56 `i `uc -> -> 0 `i `uc ]
-"97
-[; ;newmain.c: 97:     _delay((unsigned long)((1)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"98
-[; ;newmain.c: 98:     sendLCD(0x38, 0);
-[e ( _sendLCD (2 , -> -> 56 `i `uc -> -> 0 `i `uc ]
-"100
-[; ;newmain.c: 100:     sendLCD(0x08, 0);
-[e ( _sendLCD (2 , -> -> 8 `i `uc -> -> 0 `i `uc ]
-"101
-[; ;newmain.c: 101:     sendLCD(0x0F, 0);
-[e ( _sendLCD (2 , -> -> 15 `i `uc -> -> 0 `i `uc ]
-"102
-[; ;newmain.c: 102:     sendLCD(0x01, 0);
-[e ( _sendLCD (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-"103
-[; ;newmain.c: 103:     sendLCD(0x0E, 0);
-[e ( _sendLCD (2 , -> -> 14 `i `uc -> -> 0 `i `uc ]
-"104
-[; ;newmain.c: 104:     sendLCD(0x80, 0);
-[e ( _sendLCD (2 , -> -> 128 `i `uc -> -> 0 `i `uc ]
-"105
-[; ;newmain.c: 105: }
-[e :UE 105 ]
+"53
+[; ;newmain.c: 53:     char k = 99;
+[v _k `uc ~T0 @X0 1 a ]
+[e = _k -> -> 99 `i `uc ]
+"55
+[; ;newmain.c: 55:     TRISD = 0x0F;
+[e = _TRISD -> -> 15 `i `uc ]
+"56
+[; ;newmain.c: 56:     TRISB &= ~0x07;
+[e =& _TRISB -> ~ -> 7 `i `Vuc ]
+"58
+[; ;newmain.c: 58:     for (char col = 0; col < 3; col++) {
+{
+[v _col `uc ~T0 @X0 1 a ]
+[e = _col -> -> 0 `i `uc ]
+[e $ < -> _col `i -> 3 `i 102  ]
+[e $U 103  ]
+[e :U 102 ]
+{
+"60
+[; ;newmain.c: 60:         PORTB = ColomnConfig[col];
+[e = _PORTB -> *U + &U _ColomnConfig * -> _col `ux -> -> # *U &U _ColomnConfig `ui `ux `uc ]
+"61
+[; ;newmain.c: 61:         _delay((unsigned long)((500)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"63
+[; ;newmain.c: 63:         char read = ~PORTD & TRISD;
+[v _read `uc ~T0 @X0 1 a ]
+[e = _read -> & ~ -> _PORTD `i -> _TRISD `i `uc ]
+"65
+[; ;newmain.c: 65:         for (char row = 0; row < 4; row++) {
+{
+[v _row `uc ~T0 @X0 1 a ]
+[e = _row -> -> 0 `i `uc ]
+[e $ < -> _row `i -> 4 `i 105  ]
+[e $U 106  ]
+[e :U 105 ]
+{
+"66
+[; ;newmain.c: 66:             if (read & (1 << row))
+[e $ ! != & -> _read `i << -> 1 `i -> _row `i -> 0 `i 108  ]
+"67
+[; ;newmain.c: 67:                 k = row + (col * 4);
+[e = _k -> + -> _row `i * -> _col `i -> 4 `i `uc ]
+[e :U 108 ]
+"68
+[; ;newmain.c: 68:         }
 }
-"107
-[; ;newmain.c: 107: void SENDUARTSTRING(char * string) {
+[e ++ _row -> -> 1 `i `uc ]
+[e $ < -> _row `i -> 4 `i 105  ]
+[e :U 106 ]
+}
+"69
+[; ;newmain.c: 69:     }
+}
+[e ++ _col -> -> 1 `i `uc ]
+[e $ < -> _col `i -> 3 `i 102  ]
+[e :U 103 ]
+}
+"70
+[; ;newmain.c: 70: }
+[e :UE 101 ]
+}
+"72
+[; ;newmain.c: 72: void SENDUARTSTRING(char * string) {
 [v _SENDUARTSTRING `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _SENDUARTSTRING ]
 [v _string `*uc ~T0 @X0 1 r1 ]
 [f ]
-"109
-[; ;newmain.c: 109:     char i = 0;
+"74
+[; ;newmain.c: 74:     char i = 0;
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-"111
-[; ;newmain.c: 111:     while (string[i] != '\0') {
-[e $U 107  ]
-[e :U 108 ]
-{
-"113
-[; ;newmain.c: 113:         while (!PIR1bits.TXIF);
+"76
+[; ;newmain.c: 76:     while (string[i] != '\0') {
 [e $U 110  ]
 [e :U 111 ]
-[e :U 110 ]
-[e $ ! != -> . . _PIR1bits 0 4 `i -> 0 `i 111  ]
-[e :U 112 ]
-"114
-[; ;newmain.c: 114:         TXREG = string[i++];
-[e = _TXREG -> *U + _string * -> ++ _i -> -> 1 `i `uc `ux -> -> # *U _string `ui `ux `uc ]
-"115
-[; ;newmain.c: 115:     }
-}
-[e :U 107 ]
-"111
-[; ;newmain.c: 111:     while (string[i] != '\0') {
-[e $ != -> *U + _string * -> _i `ux -> -> # *U _string `ui `ux `ui -> 0 `ui 108  ]
-[e :U 109 ]
-"116
-[; ;newmain.c: 116: }
-[e :UE 106 ]
-}
-"118
-[; ;newmain.c: 118: void sendLCD(char dato, char rs) {
-[v _sendLCD `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[e :U _sendLCD ]
-[v _dato `uc ~T0 @X0 1 r1 ]
-[v _rs `uc ~T0 @X0 1 r2 ]
-[f ]
-"119
-[; ;newmain.c: 119:     PORTEbits.RE1 = 1;
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
-"120
-[; ;newmain.c: 120:     PORTD = dato;
-[e = _PORTD -> _dato `uc ]
-"121
-[; ;newmain.c: 121:     PORTEbits.RE2 = rs;
-[e = . . _PORTEbits 0 2 -> _rs `uc ]
-"122
-[; ;newmain.c: 122:     _delay((unsigned long)((3)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 3 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"124
-[; ;newmain.c: 124:     PORTEbits.RE1 = 0;
-[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
-"125
-[; ;newmain.c: 125:     _delay((unsigned long)((3)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 3 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"127
-[; ;newmain.c: 127:     PORTEbits.RE1 = 1;
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
-"128
-[; ;newmain.c: 128: }
-[e :UE 113 ]
-}
-"130
-[; ;newmain.c: 130: void SENDLCDSTRING(char * string)
-[v _SENDLCDSTRING `(v ~T0 @X0 1 ef1`*uc ]
-"131
-[; ;newmain.c: 131: {
-{
-[e :U _SENDLCDSTRING ]
-"130
-[; ;newmain.c: 130: void SENDLCDSTRING(char * string)
-[v _string `*uc ~T0 @X0 1 r1 ]
-"131
-[; ;newmain.c: 131: {
-[f ]
-"132
-[; ;newmain.c: 132:     char i = 0;
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-"133
-[; ;newmain.c: 133:     while(string[i] != '\0'){
-[e $U 115  ]
-[e :U 116 ]
-{
-"134
-[; ;newmain.c: 134:         sendLCD(string[i++], 1);
-[e ( _sendLCD (2 , *U + _string * -> ++ _i -> -> 1 `i `uc `ux -> -> # *U _string `ui `ux -> -> 1 `i `uc ]
-"135
-[; ;newmain.c: 135:     }
-}
+"78
+[; ;newmain.c: 78:         while (!PIR1bits.TXIF);
+[e $U 113  ]
+[e :U 114 ]
+[e :U 113 ]
+[e $ ! != -> . . _PIR1bits 0 4 `i -> 0 `i 114  ]
 [e :U 115 ]
-"133
-[; ;newmain.c: 133:     while(string[i] != '\0'){
-[e $ != -> *U + _string * -> _i `ux -> -> # *U _string `ui `ux `ui -> 0 `ui 116  ]
-[e :U 117 ]
-"136
-[; ;newmain.c: 136: }
-[e :UE 114 ]
+"79
+[; ;newmain.c: 79:         TXREG = string[i++];
+[e = _TXREG -> *U + _string * -> ++ _i -> -> 1 `i `uc `ux -> -> # *U _string `ui `ux `uc ]
+"80
+[; ;newmain.c: 80:     }
 }
-[v $root$_ISR `(v ~T0 @X0 0 e ]
-"138
-[; ;newmain.c: 138: void __attribute__((picinterrupt(("")))) ISR(){
-[v _ISR `(v ~T1 @X0 1 ef ]
-{
-[e :U _ISR ]
-[f ]
-"140
-[; ;newmain.c: 140:     if(RCIF){
-[e $ ! _RCIF 119  ]
-{
-"141
-[; ;newmain.c: 141:         RCIF = 0;
-[e = _RCIF -> -> 0 `i `b ]
-"143
-[; ;newmain.c: 143:         receivedString[indexString] = RCREG;
-[e = *U + &U _receivedString * -> _indexString `ux -> -> # *U &U _receivedString `ui `ux -> _RCREG `uc ]
-"145
-[; ;newmain.c: 145:         if(receivedString[indexString] == 13) {
-[e $ ! == -> *U + &U _receivedString * -> _indexString `ux -> -> # *U &U _receivedString `ui `ux `i -> 13 `i 120  ]
-{
-"146
-[; ;newmain.c: 146:             receivedString[indexString] = '\0';
-[e = *U + &U _receivedString * -> _indexString `ux -> -> # *U &U _receivedString `ui `ux -> -> 0 `ui `uc ]
-"147
-[; ;newmain.c: 147:             endReceive = 1;
-[e = _endReceive -> -> 1 `i `uc ]
-"148
-[; ;newmain.c: 148:         }
-}
-[e :U 120 ]
-"150
-[; ;newmain.c: 150:         indexString++;
-[e ++ _indexString -> -> 1 `i `uc ]
-"151
-[; ;newmain.c: 151:     }
-}
-[e :U 119 ]
-"152
-[; ;newmain.c: 152: }
-[e :UE 118 ]
+[e :U 110 ]
+"76
+[; ;newmain.c: 76:     while (string[i] != '\0') {
+[e $ != -> *U + _string * -> _i `ux -> -> # *U _string `ui `ux `ui -> 0 `ui 111  ]
+[e :U 112 ]
+"81
+[; ;newmain.c: 81: }
+[e :UE 109 ]
 }

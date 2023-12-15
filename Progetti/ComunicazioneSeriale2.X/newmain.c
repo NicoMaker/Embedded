@@ -29,7 +29,7 @@
 #define _XTAL_FREQ 8000000
 #include <xc.h>
 
-void INITUART(int);
+void INITUART(long int);
 void initLCD(void);
 void SENDUARTSTRING(char *);
 void sendLCD(char,char);
@@ -56,7 +56,7 @@ void main(void) {
     }
 }
 
-void INITUART(int baudRate) // trasmisione e ricezione seriale
+void INITUART(long int baudRate) // trasmisione e ricezione seriale
 {
     TRISCbits.TRISC7 = 1;
     TRISCbits.TRISC6 = 0;

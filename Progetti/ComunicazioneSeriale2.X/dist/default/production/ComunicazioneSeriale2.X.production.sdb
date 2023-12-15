@@ -133,7 +133,7 @@
 "59
 [v _INITUART INITUART `(v  1 e 1 0 ]
 {
-[v INITUART@baudRate baudRate `i  1 p 2 14 ]
+[v INITUART@baudRate baudRate `l  1 p 4 14 ]
 "80
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
