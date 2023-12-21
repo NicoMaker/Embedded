@@ -11,10 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
-reset_vec CODE 0 0 0 3 2 1
-end_init CODE 0 10 10 3 2 1
-config CONFIG 4 2007 2007 1 2 1
 $dist/default/production\Esame_intermedio.X.production.o
 cinit CODE 0 13 13 D 2 1
 text1 CODE 0 1B8 1B8 24 2 1
@@ -29,6 +25,10 @@ cstackBANK0 BANK0 1 36 36 12 1 1
 intentry CODE 0 4 4 C 2 1
 bssBANK0 BANK0 1 20 20 16 1 1
 clrtext CODE 0 200 200 8 2 1
+config CONFIG 4 2007 2007 1 2 1
+$C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
+reset_vec CODE 0 0 0 3 2 1
+end_init CODE 0 10 10 3 2 1
 config CONFIG 4 2007 2007 1 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -75,16 +75,16 @@ STRING 208-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Esame_intermedio.X.production.o
-13 cinit CODE >394:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-13 cinit CODE >397:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-13 cinit CODE >432:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-14 cinit CODE >433:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-15 cinit CODE >434:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-16 cinit CODE >435:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-17 cinit CODE >436:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-1C cinit CODE >442:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-1C cinit CODE >444:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-1D cinit CODE >445:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
+13 cinit CODE >394:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+13 cinit CODE >397:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+13 cinit CODE >432:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+14 cinit CODE >433:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+15 cinit CODE >434:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+16 cinit CODE >435:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+17 cinit CODE >436:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+1C cinit CODE >442:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+1C cinit CODE >444:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+1D cinit CODE >445:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
 4 intentry CODE >192:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
 164 text6 CODE >192:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
 164 text6 CODE >194:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
@@ -196,16 +196,16 @@ BC text3 CODE >41:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\al
 1AA maintext CODE >55:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
 1B0 maintext CODE >56:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
 1B3 maintext CODE >57:D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
-200 clrtext CODE >419:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-200 clrtext CODE >420:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-201 clrtext CODE >421:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-201 clrtext CODE >422:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-202 clrtext CODE >423:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-203 clrtext CODE >424:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-204 clrtext CODE >425:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-205 clrtext CODE >426:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-206 clrtext CODE >427:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
-207 clrtext CODE >428:C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_1.s
+200 clrtext CODE >419:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+200 clrtext CODE >420:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+201 clrtext CODE >421:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+201 clrtext CODE >422:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+202 clrtext CODE >423:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+203 clrtext CODE >424:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+204 clrtext CODE >425:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+205 clrtext CODE >426:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+206 clrtext CODE >427:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
+207 clrtext CODE >428:C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -229,20 +229,20 @@ __L__absolute__ 0 0 ABS 0 __absolute__ -
 __Hstrings 0 0 ABS 0 strings -
 _PIE1 8C 0 ABS 0 - dist/default/production\Esame_intermedio.X.production.o
 _RCIF 65 0 ABS 0 - dist/default/production\Esame_intermedio.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
+___sp 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
 _main 31E 0 CODE 0 maintext dist/default/production\Esame_intermedio.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Esame_intermedio.X.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
-___stack_lo 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
-start 20 0 CODE 0 init C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
+___stack_hi 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
+___stack_lo 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
+start 20 0 CODE 0 init C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
 __Hpowerup 0 0 CODE 0 powerup -
 sendLCD@dato 77 0 COMMON 1 cstackCOMMON dist/default/production\Esame_intermedio.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
 _initUART 23E 0 CODE 0 text2 dist/default/production\Esame_intermedio.X.production.o
 ___aldiv@divisor 36 0 BANK0 1 cstackBANK0 dist/default/production\Esame_intermedio.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Esame_intermedio.X.production.o
@@ -253,8 +253,8 @@ __end_of_initUART 2C8 0 CODE 0 text2 dist/default/production\Esame_intermedio.X.
 __Lmaintext 0 0 ABS 0 maintext -
 __end_of___aldiv 17A 0 CODE 0 text3 dist/default/production\Esame_intermedio.X.production.o
 _INTCON B 0 ABS 0 - dist/default/production\Esame_intermedio.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
-___stacklo 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
+___stackhi 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
 sendLCD@rs 74 0 COMMON 1 cstackCOMMON dist/default/production\Esame_intermedio.X.production.o
 start_initialization 26 0 CODE 0 cinit dist/default/production\Esame_intermedio.X.production.o
 __end_of_sendLCD 400 0 CODE 0 text5 dist/default/production\Esame_intermedio.X.production.o
@@ -262,7 +262,7 @@ ___aldiv@quotient 40 0 BANK0 1 cstackBANK0 dist/default/production\Esame_interme
 clear_ram0 400 0 CODE 0 clrtext dist/default/production\Esame_intermedio.X.production.o
 __pcstackBANK0 36 0 BANK0 1 cstackBANK0 dist/default/production\Esame_intermedio.X.production.o
 __end_of_initLCD 23E 0 CODE 0 text4 dist/default/production\Esame_intermedio.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
+___int_sp 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -309,7 +309,7 @@ _indexString 2A 0 BANK0 1 bssBANK0 dist/default/production\Esame_intermedio.X.pr
 _sendLCDString 370 0 CODE 0 text1 dist/default/production\Esame_intermedio.X.production.o
 __end_of_ISR 31E 0 CODE 0 text6 dist/default/production\Esame_intermedio.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 ___aldiv 40 0 CODE 0 text3 dist/default/production\Esame_intermedio.X.production.o
 __pmaintext 31E 0 CODE 0 maintext dist/default/production\Esame_intermedio.X.production.o
@@ -346,8 +346,8 @@ __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __H__absolute__ 0 0 ABS 0 __absolute__ -
 __end_of_sendLCDString 3B8 0 CODE 0 text1 dist/default/production\Esame_intermedio.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-___heap_hi 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
-___heap_lo 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
+___heap_hi 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
+___heap_lo 0 0 ABS 0 - C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
 __end_of__initialization 38 0 CODE 0 cinit dist/default/production\Esame_intermedio.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 _receivedString 2C 0 BANK0 1 bssBANK0 dist/default/production\Esame_intermedio.X.production.o
@@ -375,8 +375,8 @@ __pintentry 8 0 CODE 0 intentry dist/default/production\Esame_intermedio.X.produ
 _endReceive 2B 0 BANK0 1 bssBANK0 dist/default/production\Esame_intermedio.X.production.o
 __initialization 26 0 CODE 0 cinit dist/default/production\Esame_intermedio.X.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\Esame_intermedio.X.production.o
-___int_stack_hi 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
-___int_stack_lo 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAs8t0.\driver_tmp_12.o
+___int_stack_hi 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
+___int_stack_lo 0 0 STACK 2 stack C:\Users\nicol\AppData\Local\Temp\xcAsfdg.\driver_tmp_12.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
