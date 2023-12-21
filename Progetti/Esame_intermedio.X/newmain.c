@@ -7,6 +7,8 @@
 #pragma config WRT = OFF
 #pragma config CP = OFF
 
+#define _XTAL_FREQ 8000000
+
 #define L_ON 0x0F
 #define L_OFF 0x08
 #define L_CLR 0x01

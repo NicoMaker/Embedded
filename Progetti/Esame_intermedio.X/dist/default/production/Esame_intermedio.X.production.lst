@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
-                                                                                               Thu Dec 21 14:57:04 2023
+                                                                                               Thu Dec 21 15:17:17 2023
 
 Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1 
      1                           	processor	16LF877A
@@ -344,7 +344,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    330 ;;
    331 ;; *************** function _main *****************
    332 ;; Defined at:
-   333 ;;		line 45 in file "newmain.c"
+   333 ;;		line 47 in file "newmain.c"
    334 ;; Parameters:    Size  Location     Type
    335 ;;		None
    336 ;; Auto vars:     Size  Location     Type
@@ -382,7 +382,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    368                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
    369                           
    370                           
-   371                           ;newmain.c: 46:     initUART(9600);
+   371                           ;newmain.c: 48:     initUART(9600);
    372     018F  3000               	movlw	0
    373     0190  1283               	bcf	3,5	;RP0=0, select bank0
    374     0191  1303               	bcf	3,6	;RP1=0, select bank0
@@ -395,28 +395,28 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    381     0198  00C4               	movwf	initUART@baudRate
    382     0199  120A  118A  211F  120A  118A  	fcall	_initUART
    383                           
-   384                           ;newmain.c: 48:     initLCD();
+   384                           ;newmain.c: 50:     initLCD();
    385     019E  120A  118A  20BD  120A  118A  	fcall	_initLCD
    386     01A3                     l923:
    387                           
-   388                           ;newmain.c: 52:         sendLCD(0x01, 0);
+   388                           ;newmain.c: 54:         sendLCD(0x01, 0);
    389     01A3  01F4               	clrf	sendLCD@rs
    390     01A4  3001               	movlw	1
    391     01A5  120A  118A  21DC  120A  118A  	fcall	_sendLCD
    392     01AA                     l925:
    393                           
-   394                           ;newmain.c: 53:         sendLCDString(receivedString);
+   394                           ;newmain.c: 55:         sendLCDString(receivedString);
    395     01AA  302C               	movlw	(low (_receivedString| 0))& (0+255)
    396     01AB  120A  118A  21B8  120A  118A  	fcall	_sendLCDString
    397     01B0                     l927:
    398                           
-   399                           ;newmain.c: 54:         endReceive = 0;
+   399                           ;newmain.c: 56:         endReceive = 0;
    400     01B0  1283               	bcf	3,5	;RP0=0, select bank0
    401     01B1  1303               	bcf	3,6	;RP1=0, select bank0
    402     01B2  01AB               	clrf	_endReceive
    403     01B3                     l929:
    404                           
-   405                           ;newmain.c: 55:         indexString = 0;
+   405                           ;newmain.c: 57:         indexString = 0;
    406     01B3  01AA               	clrf	_indexString
    407     01B4  29A3               	goto	l923
    408     01B5  120A  118A  2810   	ljmp	start
@@ -426,7 +426,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    412     01B8                     __ptext1:	
    413 ;; *************** function _sendLCDString *****************
    414 ;; Defined at:
-   415 ;;		line 138 in file "newmain.c"
+   415 ;;		line 140 in file "newmain.c"
    416 ;; Parameters:    Size  Location     Type
    417 ;;  s               1    wreg     PTR unsigned char 
    418 ;;		 -> receivedString(10), 
@@ -469,14 +469,14 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    455     01BA  00B6               	movwf	sendLCDString@s
    456     01BB                     l913:
    457                           
-   458                           ;newmain.c: 139:     char i = 0;
+   458                           ;newmain.c: 141:     char i = 0;
    459     01BB  01B7               	clrf	sendLCDString@i
    460                           
-   461                           ;newmain.c: 140:     while (s[i] != '\0')
+   461                           ;newmain.c: 142:     while (s[i] != '\0')
    462     01BC  29D0               	goto	l919
    463     01BD                     l915:
    464                           
-   465                           ;newmain.c: 141:     {;newmain.c: 142:         sendLCD(s[i], 1);
+   465                           ;newmain.c: 143:     {;newmain.c: 144:         sendLCD(s[i], 1);
    466     01BD  01F4               	clrf	sendLCD@rs
    467     01BE  0AF4               	incf	sendLCD@rs,f
    468     01BF  0837               	movf	sendLCDString@i,w
@@ -488,7 +488,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    474     01C5  120A  118A  21DC  120A  118A  	fcall	_sendLCD
    475     01CA                     l917:
    476                           
-   477                           ;newmain.c: 143:         i++;
+   477                           ;newmain.c: 145:         i++;
    478     01CA  3001               	movlw	1
    479     01CB  00FF               	movwf	btemp+1
    480     01CC  087F               	movf	btemp+1,w
@@ -497,7 +497,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    483     01CF  07B7               	addwf	sendLCDString@i,f
    484     01D0                     l919:
    485                           
-   486                           ;newmain.c: 140:     while (s[i] != '\0')
+   486                           ;newmain.c: 142:     while (s[i] != '\0')
    487     01D0  0837               	movf	sendLCDString@i,w
    488     01D1  0736               	addwf	sendLCDString@s,w
    489     01D2  00F8               	movwf	??_sendLCDString
@@ -519,7 +519,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    505     011F                     __ptext2:	
    506 ;; *************** function _initUART *****************
    507 ;; Defined at:
-   508 ;;		line 59 in file "newmain.c"
+   508 ;;		line 61 in file "newmain.c"
    509 ;; Parameters:    Size  Location     Type
    510 ;;  baudRate        4   14[BANK0 ] long 
    511 ;; Auto vars:     Size  Location     Type
@@ -555,24 +555,24 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    541                           ; Regs used in _initUART: [wreg+status,2+status,0+btemp+1+pclath+cstack]
    542                           
    543                           
-   544                           ;newmain.c: 59: void initUART(long int baudRate);newmain.c: 60: {;newmain.c: 66:     TRI
+   544                           ;newmain.c: 61: void initUART(long int baudRate);newmain.c: 62: {;newmain.c: 68:     TRI
       +                          SC |= 0x80;
    545     011F  1683               	bsf	3,5	;RP0=1, select bank1
    546     0120  1303               	bcf	3,6	;RP1=0, select bank1
    547     0121  1787               	bsf	7,7	;volatile
    548     0122                     l873:
    549                           
-   550                           ;newmain.c: 67:     TRISC &= ~0x40;
+   550                           ;newmain.c: 69:     TRISC &= ~0x40;
    551     0122  30BF               	movlw	191
    552     0123  00FF               	movwf	btemp+1
    553     0124  087F               	movf	btemp+1,w
    554     0125  0587               	andwf	7,f	;volatile
    555     0126                     l875:
    556                           
-   557                           ;newmain.c: 73:     TXSTA |= 0X20;
+   557                           ;newmain.c: 75:     TXSTA |= 0X20;
    558     0126  1698               	bsf	24,5	;volatile
    559                           
-   560                           ;newmain.c: 78:     RCSTA |= 0x90;
+   560                           ;newmain.c: 80:     RCSTA |= 0x90;
    561     0127  3090               	movlw	144
    562     0128  00FF               	movwf	btemp+1
    563     0129  087F               	movf	btemp+1,w
@@ -580,20 +580,20 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    565     012B  1303               	bcf	3,6	;RP1=0, select bank0
    566     012C  0498               	iorwf	24,f	;volatile
    567                           
-   568                           ;newmain.c: 80:     INTCON |= 0xC0;
+   568                           ;newmain.c: 82:     INTCON |= 0xC0;
    569     012D  30C0               	movlw	192
    570     012E  00FF               	movwf	btemp+1
    571     012F  087F               	movf	btemp+1,w
    572     0130  048B               	iorwf	11,f	;volatile
    573     0131                     l877:
    574                           
-   575                           ;newmain.c: 81:     PIE1 |= 0x20;
+   575                           ;newmain.c: 83:     PIE1 |= 0x20;
    576     0131  1683               	bsf	3,5	;RP0=1, select bank1
    577     0132  1303               	bcf	3,6	;RP1=0, select bank1
    578     0133  168C               	bsf	12,5	;volatile
    579     0134                     l879:
    580                           
-   581                           ;newmain.c: 84:     SPBRG = (8000000 / (long) (64UL * baudRate)) - 1;
+   581                           ;newmain.c: 86:     SPBRG = (8000000 / (long) (64UL * baudRate)) - 1;
    582     0134  1283               	bcf	3,5	;RP0=0, select bank0
    583     0135  1303               	bcf	3,6	;RP1=0, select bank0
    584     0136  0844               	movf	initUART@baudRate,w
@@ -887,7 +887,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    872     00BD                     __ptext4:	
    873 ;; *************** function _initLCD *****************
    874 ;; Defined at:
-   875 ;;		line 166 in file "newmain.c"
+   875 ;;		line 168 in file "newmain.c"
    876 ;; Parameters:    Size  Location     Type
    877 ;;		None
    878 ;; Auto vars:     Size  Location     Type
@@ -923,30 +923,30 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    908                           ; Regs used in _initLCD: [wreg+status,2+status,0+btemp+1+pclath+cstack]
    909                           
    910                           
-   911                           ;newmain.c: 167:     TRISD = 0x00;
+   911                           ;newmain.c: 169:     TRISD = 0x00;
    912     00BD  1683               	bsf	3,5	;RP0=1, select bank1
    913     00BE  1303               	bcf	3,6	;RP1=0, select bank1
    914     00BF  0188               	clrf	8	;volatile
    915     00C0                     l883:
    916                           
-   917                           ;newmain.c: 168:     TRISE &= ~0x06;
+   917                           ;newmain.c: 170:     TRISE &= ~0x06;
    918     00C0  30F9               	movlw	249
    919     00C1  00FF               	movwf	btemp+1
    920     00C2  087F               	movf	btemp+1,w
    921     00C3  0589               	andwf	9,f	;volatile
    922     00C4                     l885:
    923                           
-   924                           ;newmain.c: 170:     PORTEbits.RE1 = 0;
+   924                           ;newmain.c: 172:     PORTEbits.RE1 = 0;
    925     00C4  1283               	bcf	3,5	;RP0=0, select bank0
    926     00C5  1303               	bcf	3,6	;RP1=0, select bank0
    927     00C6  1089               	bcf	9,1	;volatile
    928     00C7                     l887:
    929                           
-   930                           ;newmain.c: 171:     PORTEbits.RE2 = 0;
+   930                           ;newmain.c: 173:     PORTEbits.RE2 = 0;
    931     00C7  1109               	bcf	9,2	;volatile
    932     00C8                     l889:
    933                           
-   934                           ;newmain.c: 173:     _delay((unsigned long)((20)*(8000000/4000.0)));
+   934                           ;newmain.c: 175:     _delay((unsigned long)((20)*(8000000/4000.0)));
    935     00C8  3034               	movlw	52
    936     00C9  00F9               	movwf	??_initLCD+1
    937     00CA  30F1               	movlw	241
@@ -959,19 +959,19 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    944     00D0  28D1               	nop2
    945     00D1                     l891:
    946                           
-   947                           ;newmain.c: 174:     PORTEbits.RE1 = 1;
+   947                           ;newmain.c: 176:     PORTEbits.RE1 = 1;
    948     00D1  1283               	bcf	3,5	;RP0=0, select bank0
    949     00D2  1303               	bcf	3,6	;RP1=0, select bank0
    950     00D3  1489               	bsf	9,1	;volatile
    951     00D4                     l893:
    952                           
-   953                           ;newmain.c: 175:     sendLCD(0x38, 0);
+   953                           ;newmain.c: 177:     sendLCD(0x38, 0);
    954     00D4  01F4               	clrf	sendLCD@rs
    955     00D5  3038               	movlw	56
    956     00D6  120A  118A  21DC  120A  118A  	fcall	_sendLCD
    957     00DB                     l895:
    958                           
-   959                           ;newmain.c: 177:     _delay((unsigned long)((5)*(8000000/4000.0)));
+   959                           ;newmain.c: 179:     _delay((unsigned long)((5)*(8000000/4000.0)));
    960     00DB  300D               	movlw	13
    961     00DC  00F9               	movwf	??_initLCD+1
    962     00DD  30FB               	movlw	251
@@ -984,13 +984,13 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    969     00E3  28E4               	nop2
    970     00E4                     l897:
    971                           
-   972                           ;newmain.c: 178:     sendLCD(0x38, 0);
+   972                           ;newmain.c: 180:     sendLCD(0x38, 0);
    973     00E4  01F4               	clrf	sendLCD@rs
    974     00E5  3038               	movlw	56
    975     00E6  120A  118A  21DC  120A  118A  	fcall	_sendLCD
    976     00EB                     l899:
    977                           
-   978                           ;newmain.c: 180:     _delay((unsigned long)((1)*(8000000/4000.0)));
+   978                           ;newmain.c: 182:     _delay((unsigned long)((1)*(8000000/4000.0)));
    979     00EB  3003               	movlw	3
    980     00EC  00F9               	movwf	??_initLCD+1
    981     00ED  3097               	movlw	151
@@ -1003,37 +1003,37 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    988     00F3  28F4               	nop2
    989     00F4                     l901:
    990                           
-   991                           ;newmain.c: 181:     sendLCD(0x38, 0);
+   991                           ;newmain.c: 183:     sendLCD(0x38, 0);
    992     00F4  01F4               	clrf	sendLCD@rs
    993     00F5  3038               	movlw	56
    994     00F6  120A  118A  21DC  120A  118A  	fcall	_sendLCD
    995     00FB                     l903:
    996                           
-   997                           ;newmain.c: 183:     sendLCD(0x08, 0);
+   997                           ;newmain.c: 185:     sendLCD(0x08, 0);
    998     00FB  01F4               	clrf	sendLCD@rs
    999     00FC  3008               	movlw	8
   1000     00FD  120A  118A  21DC  120A  118A  	fcall	_sendLCD
   1001     0102                     l905:
   1002                           
-  1003                           ;newmain.c: 184:     sendLCD(0x0F, 0);
+  1003                           ;newmain.c: 186:     sendLCD(0x0F, 0);
   1004     0102  01F4               	clrf	sendLCD@rs
   1005     0103  300F               	movlw	15
   1006     0104  120A  118A  21DC  120A  118A  	fcall	_sendLCD
   1007     0109                     l907:
   1008                           
-  1009                           ;newmain.c: 185:     sendLCD(0x01, 0);
+  1009                           ;newmain.c: 187:     sendLCD(0x01, 0);
   1010     0109  01F4               	clrf	sendLCD@rs
   1011     010A  3001               	movlw	1
   1012     010B  120A  118A  21DC  120A  118A  	fcall	_sendLCD
   1013     0110                     l909:
   1014                           
-  1015                           ;newmain.c: 186:     sendLCD(0x0E, 0);
+  1015                           ;newmain.c: 188:     sendLCD(0x0E, 0);
   1016     0110  01F4               	clrf	sendLCD@rs
   1017     0111  300E               	movlw	14
   1018     0112  120A  118A  21DC  120A  118A  	fcall	_sendLCD
   1019     0117                     l911:
   1020                           
-  1021                           ;newmain.c: 187:     sendLCD(0x80, 0);
+  1021                           ;newmain.c: 189:     sendLCD(0x80, 0);
   1022     0117  01F4               	clrf	sendLCD@rs
   1023     0118  3080               	movlw	128
   1024     0119  120A  118A  21DC  120A  118A  	fcall	_sendLCD
@@ -1045,7 +1045,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1030     01DC                     __ptext5:	
   1031 ;; *************** function _sendLCD *****************
   1032 ;; Defined at:
-  1033 ;;		line 150 in file "newmain.c"
+  1033 ;;		line 152 in file "newmain.c"
   1034 ;; Parameters:    Size  Location     Type
   1035 ;;  dato            1    wreg     unsigned char 
   1036 ;;  rs              1    4[COMMON] unsigned char 
@@ -1086,19 +1086,19 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1071     01DC  00F7               	movwf	sendLCD@dato
   1072     01DD                     l815:
   1073                           
-  1074                           ;newmain.c: 150: void sendLCD(char dato, char rs);newmain.c: 151: {;newmain.c: 152:     
+  1074                           ;newmain.c: 152: void sendLCD(char dato, char rs);newmain.c: 153: {;newmain.c: 154:     
       +                          PORTEbits.RE1 = 1;
   1075     01DD  1283               	bcf	3,5	;RP0=0, select bank0
   1076     01DE  1303               	bcf	3,6	;RP1=0, select bank0
   1077     01DF  1489               	bsf	9,1	;volatile
   1078     01E0                     l817:
   1079                           
-  1080                           ;newmain.c: 153:     PORTD = dato;
+  1080                           ;newmain.c: 155:     PORTD = dato;
   1081     01E0  0877               	movf	sendLCD@dato,w
   1082     01E1  0088               	movwf	8	;volatile
   1083     01E2                     l819:
   1084                           
-  1085                           ;newmain.c: 154:     PORTEbits.RE2 = rs;
+  1085                           ;newmain.c: 156:     PORTEbits.RE2 = rs;
   1086     01E2  0C74               	rrf	sendLCD@rs,w
   1087     01E3  1C03               	skipc
   1088     01E4  1109               	bcf	9,2	;volatile
@@ -1106,7 +1106,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1090     01E6  1509               	bsf	9,2	;volatile
   1091     01E7                     l821:
   1092                           
-  1093                           ;newmain.c: 155:     _delay((unsigned long)((3)*(8000000/4000.0)));
+  1093                           ;newmain.c: 157:     _delay((unsigned long)((3)*(8000000/4000.0)));
   1094     01E7  3008               	movlw	8
   1095     01E8  00F6               	movwf	??_sendLCD+1
   1096     01E9  30C9               	movlw	201
@@ -1119,13 +1119,13 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1103     01EF  29F0               	nop2
   1104     01F0                     l823:
   1105                           
-  1106                           ;newmain.c: 157:     PORTEbits.RE1 = 0;
+  1106                           ;newmain.c: 159:     PORTEbits.RE1 = 0;
   1107     01F0  1283               	bcf	3,5	;RP0=0, select bank0
   1108     01F1  1303               	bcf	3,6	;RP1=0, select bank0
   1109     01F2  1089               	bcf	9,1	;volatile
   1110     01F3                     l825:
   1111                           
-  1112                           ;newmain.c: 158:     _delay((unsigned long)((3)*(8000000/4000.0)));
+  1112                           ;newmain.c: 160:     _delay((unsigned long)((3)*(8000000/4000.0)));
   1113     01F3  3008               	movlw	8
   1114     01F4  00F6               	movwf	??_sendLCD+1
   1115     01F5  30C9               	movlw	201
@@ -1138,7 +1138,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1122     01FB  29FC               	nop2
   1123     01FC                     l827:
   1124                           
-  1125                           ;newmain.c: 160:     PORTEbits.RE1 = 1;
+  1125                           ;newmain.c: 162:     PORTEbits.RE1 = 1;
   1126     01FC  1283               	bcf	3,5	;RP0=0, select bank0
   1127     01FD  1303               	bcf	3,6	;RP1=0, select bank0
   1128     01FE  1489               	bsf	9,1	;volatile
@@ -1150,7 +1150,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1134     0164                     __ptext6:	
   1135 ;; *************** function _ISR *****************
   1136 ;; Defined at:
-  1137 ;;		line 190 in file "newmain.c"
+  1137 ;;		line 192 in file "newmain.c"
   1138 ;; Parameters:    Size  Location     Type
   1139 ;;		None
   1140 ;; Auto vars:     Size  Location     Type
@@ -1182,7 +1182,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1166                           
   1167     0164                     i1l969:
   1168                           
-  1169                           ;newmain.c: 192:     if(RCIF){
+  1169                           ;newmain.c: 194:     if(RCIF){
   1170     0164  1283               	bcf	3,5	;RP0=0, select bank0
   1171     0165  1303               	bcf	3,6	;RP1=0, select bank0
   1172     0166  1E8C               	btfss	12,5	;volatile
@@ -1193,11 +1193,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1177     016A                     u37_20:
   1178     016A                     i1l971:
   1179                           
-  1180                           ;newmain.c: 193:         RCIF = 0;
+  1180                           ;newmain.c: 195:         RCIF = 0;
   1181     016A  128C               	bcf	12,5	;volatile
   1182     016B                     i1l973:
   1183                           
-  1184                           ;newmain.c: 195:         receivedString[indexString] = RCREG;
+  1184                           ;newmain.c: 197:         receivedString[indexString] = RCREG;
   1185     016B  082A               	movf	_indexString,w
   1186     016C  3E2C               	addlw	(low (_receivedString| 0))& (0+255)
   1187     016D  0084               	movwf	4
@@ -1205,7 +1205,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1189     016F  1383               	bcf	3,7	;select IRP bank0
   1190     0170  0080               	movwf	0
   1191                           
-  1192                           ;newmain.c: 197:         if(receivedString[indexString] == 13) {
+  1192                           ;newmain.c: 199:         if(receivedString[indexString] == 13) {
   1193     0171  082A               	movf	_indexString,w
   1194     0172  3E2C               	addlw	(low (_receivedString| 0))& (0+255)
   1195     0173  0084               	movwf	4
@@ -1219,19 +1219,19 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1203     017A                     u38_20:
   1204     017A                     i1l975:
   1205                           
-  1206                           ;newmain.c: 198:             receivedString[indexString] = '\0';
+  1206                           ;newmain.c: 200:             receivedString[indexString] = '\0';
   1207     017A  082A               	movf	_indexString,w
   1208     017B  3E2C               	addlw	(low (_receivedString| 0))& (0+255)
   1209     017C  0084               	movwf	4
   1210     017D  0180               	clrf	0
   1211     017E                     i1l977:
   1212                           
-  1213                           ;newmain.c: 199:             endReceive = 1;
+  1213                           ;newmain.c: 201:             endReceive = 1;
   1214     017E  01AB               	clrf	_endReceive
   1215     017F  0AAB               	incf	_endReceive,f
   1216     0180                     i1l979:
   1217                           
-  1218                           ;newmain.c: 202:         indexString++;
+  1218                           ;newmain.c: 204:         indexString++;
   1219     0180  3001               	movlw	1
   1220     0181  00FF               	movwf	btemp+1
   1221     0182  087F               	movf	btemp+1,w
@@ -1444,7 +1444,7 @@ DATA                 0      0      32      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.45 build 20230818022343 
-Symbol Table                                                                                   Thu Dec 21 14:57:04 2023
+Symbol Table                                                                                   Thu Dec 21 15:17:17 2023
 
                      l61 0163                       l90 011E                       l84 01DB  
                      l87 01FF                       fsr 0004                      l248 0034  

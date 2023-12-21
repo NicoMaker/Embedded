@@ -13,17 +13,17 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"45 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
+"47 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
 [v _main main `(v  1 e 1 0 ]
-"59
+"61
 [v _initUART initUART `(v  1 e 1 0 ]
-"138
+"140
 [v _sendLCDString sendLCDString `(v  1 e 1 0 ]
-"150
+"152
 [v _sendLCD sendLCD `(v  1 e 1 0 ]
-"166
+"168
 [v _initLCD initLCD `(v  1 e 1 0 ]
-"190
+"192
 [v _ISR ISR `II(v  1 e 1 0 ]
 "216 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16lf877a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -72,32 +72,32 @@
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2747
 [v _RCIF RCIF `VEb  1 e 0 @101 ]
-"40 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
+"42 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
 [v _columnConfig columnConfig `[10]uc  1 e 10 0 ]
 [v _endReceive endReceive `uc  1 e 1 0 ]
 [v _indexString indexString `uc  1 e 1 0 ]
 [v _receivedString receivedString `[10]uc  1 e 10 0 ]
-"45
+"47
 [v _main main `(v  1 e 1 0 ]
 {
-"57
+"59
 } 0
-"138
+"140
 [v _sendLCDString sendLCDString `(v  1 e 1 0 ]
 {
 [v sendLCDString@s s `*.4uc  1 a 1 wreg ]
-"139
+"141
 [v sendLCDString@i i `uc  1 a 1 1 ]
-"138
+"140
 [v sendLCDString@s s `*.4uc  1 a 1 wreg ]
 [v sendLCDString@s s `*.4uc  1 a 1 0 ]
-"145
+"147
 } 0
-"59
+"61
 [v _initUART initUART `(v  1 e 1 0 ]
 {
 [v initUART@baudRate baudRate `l  1 p 4 14 ]
-"85
+"87
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
@@ -112,23 +112,23 @@
 [v ___aldiv@dividend dividend `l  1 p 4 4 ]
 "41
 } 0
-"166 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
+"168 D:\Corso ITS IIOT\2 anno\Embedded\Progetti\Esame_intermedio.X\newmain.c
 [v _initLCD initLCD `(v  1 e 1 0 ]
 {
-"188
+"190
 } 0
-"150
+"152
 [v _sendLCD sendLCD `(v  1 e 1 0 ]
 {
 [v sendLCD@dato dato `uc  1 a 1 wreg ]
 [v sendLCD@dato dato `uc  1 a 1 wreg ]
 [v sendLCD@rs rs `uc  1 p 1 4 ]
-"152
+"154
 [v sendLCD@dato dato `uc  1 a 1 7 ]
-"161
+"163
 } 0
-"190
+"192
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"204
+"206
 } 0
