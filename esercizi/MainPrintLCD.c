@@ -92,21 +92,21 @@ void extractDigitsNumber(long num, char *s) {
     //Parto dalla cifra di sinistra e arrivo alla cifra di destra
     for (char i = 0, j = numLenght - 1; i < numLenght; i++, j--) {
         long divisore = 1;
-        //Preparo il divisore per estrarre la cifra più a sinistra del numero di input
+        //Preparo il divisore per estrarre la cifra piÃ¹ a sinistra del numero di input
         for (char k = j; k > 0; k--) {
             divisore *= 10;
         }
 
         char count = 0;
         //In base al valore della cifra, sottraggo il divisore al numero e incremento la conta
-        //Tale conta è il valore della cifra
+        //Tale conta Ã¨ il valore della cifra
         while (num - divisore >= 0) {
-            //Sottraggo al numero il divisore per rendere più facilil i conti nei cicli successivi.
+            //Sottraggo al numero il divisore per rendere piÃ¹ facilil i conti nei cicli successivi.
             num -= divisore;
             count++;
         }
-        //Invio la cifra al display che la posizionerà da sinistra a destra
-        //L'ordine delle cifre viene così mantenuto.
+        //Invio la cifra al display che la posizionerÃ  da sinistra a destra
+        //L'ordine delle cifre viene cosÃ¬ mantenuto.
         //sendLCD('0' + count, DATA);
         s[i] = '0' + count;
     }
@@ -116,7 +116,7 @@ char NumberLenght(long num) {
     char numLength = 1;
     long baseTester = 9;
     while (num - baseTester >= 0) {
-        //Sottraggo al numero un valore sempre più grande per calcolare la lunghezza del numero di input.
+        //Sottraggo al numero un valore sempre piÃ¹ grande per calcolare la lunghezza del numero di input.
         baseTester = baseTester * 10 + 9;
         numLength++;
     }
