@@ -321,18 +321,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _temperature `i ~T0 @X0 1 a ]
 [e = _temperature + -> _ADRESL `i << -> _ADRESH `i -> 8 `i ]
 "42
-[; ;main.c: 42:         if (temperature > 80)
-[e $ ! > _temperature -> 80 `i 106  ]
+[; ;main.c: 42:         if (temperature > 81)
+[e $ ! > _temperature -> 81 `i 106  ]
 "43
 [; ;main.c: 43:             PORTCbits.RC2 = 1;
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
 [e $U 107  ]
 "44
-[; ;main.c: 44:         else
+[; ;main.c: 44:         else if (temperature < 79)
 [e :U 106 ]
+[e $ ! < _temperature -> 79 `i 108  ]
 "45
 [; ;main.c: 45:             PORTCbits.RC2 = 0;
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[e :U 108 ]
 [e :U 107 ]
 "47
 [; ;main.c: 47:         _delay((unsigned long)((20)*(8000000/4000.0)));

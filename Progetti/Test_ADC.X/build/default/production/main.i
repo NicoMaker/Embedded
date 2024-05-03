@@ -1938,9 +1938,9 @@ void main(void) {
 
         int temperature = ADRESL + (ADRESH << 8);
 
-        if (temperature > 80)
+        if (temperature > 81)
             PORTCbits.RC2 = 1;
-        else
+        else if (temperature < 79)
             PORTCbits.RC2 = 0;
 
         _delay((unsigned long)((20)*(8000000/4000.0)));

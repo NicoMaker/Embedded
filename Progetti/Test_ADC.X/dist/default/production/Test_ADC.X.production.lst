@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
-                                                                                               Fri May 03 12:27:20 2024
+                                                                                               Fri May 03 12:30:32 2024
 
 Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1 
      1                           	processor	16F877A
@@ -198,7 +198,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    184                           
    185     07FC                     __end_of__initialization:
    186     07FC  0183               	clrf	3
-   187     07FD  120A  118A  2FB0   	ljmp	_main	;jump to C main() function
+   187     07FD  120A  118A  2FA3   	ljmp	_main	;jump to C main() function
    188                           
    189                           	psect	cstackCOMMON
    190     0070                     __pcstackCOMMON:
@@ -215,7 +215,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    201     0072                     	ds	2
    202                           
    203                           	psect	maintext
-   204     07B0                     __pmaintext:	
+   204     07A3                     __pmaintext:	
    205 ;;
    206 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
    207 ;;
@@ -247,167 +247,182 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    233 ;; This function uses a non-reentrant model
    234 ;;
    235                           
-   236     07B0                     _main:	
+   236     07A3                     _main:	
    237                           ;psect for function _main
    238                           
-   239     07B0                     l583:	
+   239     07A3                     l584:	
    240                           ;incstack = 0
    241                           ; Regs used in _main: [wreg+status,2+btemp+1]
    242                           
    243                           
    244                           ;main.c: 16:     TRISB = 0x00;
-   245     07B0  1683               	bsf	3,5	;RP0=1, select bank1
-   246     07B1  1303               	bcf	3,6	;RP1=0, select bank1
-   247     07B2  0186               	clrf	6	;volatile
+   245     07A3  1683               	bsf	3,5	;RP0=1, select bank1
+   246     07A4  1303               	bcf	3,6	;RP1=0, select bank1
+   247     07A5  0186               	clrf	6	;volatile
    248                           
    249                           ;main.c: 17:     TRISD = 0x00;
-   250     07B3  0188               	clrf	8	;volatile
-   251     07B4                     l585:
+   250     07A6  0188               	clrf	8	;volatile
+   251     07A7                     l586:
    252                           
    253                           ;main.c: 19:     TRISA = 0xFF;
-   254     07B4  30FF               	movlw	255
-   255     07B5  0085               	movwf	5	;volatile
-   256     07B6                     l587:
+   254     07A7  30FF               	movlw	255
+   255     07A8  0085               	movwf	5	;volatile
+   256     07A9                     l588:
    257                           
    258                           ;main.c: 20:     TRISC = 0x00;
-   259     07B6  0187               	clrf	7	;volatile
+   259     07A9  0187               	clrf	7	;volatile
    260                           
    261                           ;main.c: 25:     ADCON0 = 0x11;
-   262     07B7  3011               	movlw	17
-   263     07B8  1283               	bcf	3,5	;RP0=0, select bank0
-   264     07B9  1303               	bcf	3,6	;RP1=0, select bank0
-   265     07BA  009F               	movwf	31	;volatile
+   262     07AA  3011               	movlw	17
+   263     07AB  1283               	bcf	3,5	;RP0=0, select bank0
+   264     07AC  1303               	bcf	3,6	;RP1=0, select bank0
+   265     07AD  009F               	movwf	31	;volatile
    266                           
    267                           ;main.c: 27:     ADCON1 = 0x80;
-   268     07BB  3080               	movlw	128
-   269     07BC  1683               	bsf	3,5	;RP0=1, select bank1
-   270     07BD  1303               	bcf	3,6	;RP1=0, select bank1
-   271     07BE  009F               	movwf	31	;volatile
-   272     07BF                     l589:
+   268     07AE  3080               	movlw	128
+   269     07AF  1683               	bsf	3,5	;RP0=1, select bank1
+   270     07B0  1303               	bcf	3,6	;RP1=0, select bank1
+   271     07B1  009F               	movwf	31	;volatile
+   272     07B2                     l590:
    273                           
    274                           ;main.c: 28:     PORTCbits.RC5 = 1;
-   275     07BF  1283               	bcf	3,5	;RP0=0, select bank0
-   276     07C0  1303               	bcf	3,6	;RP1=0, select bank0
-   277     07C1  1687               	bsf	7,5	;volatile
+   275     07B2  1283               	bcf	3,5	;RP0=0, select bank0
+   276     07B3  1303               	bcf	3,6	;RP1=0, select bank0
+   277     07B4  1687               	bsf	7,5	;volatile
    278                           
    279                           ;main.c: 29:     _delay((unsigned long)((20)*(8000000/4000000.0)));
-   280     07C2  300D               	movlw	13
-   281     07C3  00F0               	movwf	??_main
-   282     07C4                     u37:
-   283     07C4  0BF0               	decfsz	??_main,f
-   284     07C5  2FC4               	goto	u37
-   285     07C6                     l591:
+   280     07B5  300D               	movlw	13
+   281     07B6  00F0               	movwf	??_main
+   282     07B7                     u47:
+   283     07B7  0BF0               	decfsz	??_main,f
+   284     07B8  2FB7               	goto	u47
+   285     07B9                     l592:
    286                           
    287                           ;main.c: 33:         ADCON0bits.GO = 1;
-   288     07C6  1283               	bcf	3,5	;RP0=0, select bank0
-   289     07C7  1303               	bcf	3,6	;RP1=0, select bank0
-   290     07C8  151F               	bsf	31,2	;volatile
-   291     07C9                     l32:	
+   288     07B9  1283               	bcf	3,5	;RP0=0, select bank0
+   289     07BA  1303               	bcf	3,6	;RP1=0, select bank0
+   290     07BB  151F               	bsf	31,2	;volatile
+   291     07BC                     l32:	
    292                           ;main.c: 35:         while (ADCON0bits.GO != 0);
    293                           
-   294     07C9  191F               	btfsc	31,2	;volatile
-   295     07CA  2FCC               	goto	u11
-   296     07CB  2FCD               	goto	u10
-   297     07CC                     u11:
-   298     07CC  2FC9               	goto	l32
-   299     07CD                     u10:
-   300     07CD                     l593:
+   294     07BC  191F               	btfsc	31,2	;volatile
+   295     07BD  2FBF               	goto	u11
+   296     07BE  2FC0               	goto	u10
+   297     07BF                     u11:
+   298     07BF  2FBC               	goto	l32
+   299     07C0                     u10:
+   300     07C0                     l594:
    301                           
    302                           ;main.c: 37:         PORTB = ADRESL;
-   303     07CD  1683               	bsf	3,5	;RP0=1, select bank1
-   304     07CE  1303               	bcf	3,6	;RP1=0, select bank1
-   305     07CF  081E               	movf	30,w	;volatile
-   306     07D0  1283               	bcf	3,5	;RP0=0, select bank0
-   307     07D1  1303               	bcf	3,6	;RP1=0, select bank0
-   308     07D2  0086               	movwf	6	;volatile
+   303     07C0  1683               	bsf	3,5	;RP0=1, select bank1
+   304     07C1  1303               	bcf	3,6	;RP1=0, select bank1
+   305     07C2  081E               	movf	30,w	;volatile
+   306     07C3  1283               	bcf	3,5	;RP0=0, select bank0
+   307     07C4  1303               	bcf	3,6	;RP1=0, select bank0
+   308     07C5  0086               	movwf	6	;volatile
    309                           
    310                           ;main.c: 38:         PORTD = ADRESH;
-   311     07D3  081E               	movf	30,w	;volatile
-   312     07D4  0088               	movwf	8	;volatile
+   311     07C6  081E               	movf	30,w	;volatile
+   312     07C7  0088               	movwf	8	;volatile
    313                           
    314                           ;main.c: 40:         int temperature = ADRESL + (ADRESH << 8);
-   315     07D5  081E               	movf	30,w	;volatile
-   316     07D6  00F3               	movwf	main@temperature+1
-   317     07D7  1683               	bsf	3,5	;RP0=1, select bank1
-   318     07D8  1303               	bcf	3,6	;RP1=0, select bank1
-   319     07D9  081E               	movf	30,w	;volatile
-   320     07DA  00F2               	movwf	main@temperature
-   321     07DB                     l595:
+   315     07C8  081E               	movf	30,w	;volatile
+   316     07C9  00F3               	movwf	main@temperature+1
+   317     07CA  1683               	bsf	3,5	;RP0=1, select bank1
+   318     07CB  1303               	bcf	3,6	;RP1=0, select bank1
+   319     07CC  081E               	movf	30,w	;volatile
+   320     07CD  00F2               	movwf	main@temperature
+   321     07CE                     l596:
    322                           
-   323                           ;main.c: 42:         if (temperature > 80)
-   324     07DB  0873               	movf	main@temperature+1,w
-   325     07DC  3A80               	xorlw	128
-   326     07DD  00FF               	movwf	btemp+1
-   327     07DE  3080               	movlw	128
-   328     07DF  027F               	subwf	btemp+1,w
-   329     07E0  1D03               	skipz
-   330     07E1  2FE4               	goto	u25
-   331     07E2  3051               	movlw	81
-   332     07E3  0272               	subwf	main@temperature,w
-   333     07E4                     u25:
-   334     07E4  1C03               	skipc
-   335     07E5  2FE7               	goto	u21
-   336     07E6  2FE8               	goto	u20
-   337     07E7                     u21:
-   338     07E7  2FEC               	goto	l35
-   339     07E8                     u20:
-   340     07E8                     l597:
+   323                           ;main.c: 42:         if (temperature > 81)
+   324     07CE  0873               	movf	main@temperature+1,w
+   325     07CF  3A80               	xorlw	128
+   326     07D0  00FF               	movwf	btemp+1
+   327     07D1  3080               	movlw	128
+   328     07D2  027F               	subwf	btemp+1,w
+   329     07D3  1D03               	skipz
+   330     07D4  2FD7               	goto	u25
+   331     07D5  3052               	movlw	82
+   332     07D6  0272               	subwf	main@temperature,w
+   333     07D7                     u25:
+   334     07D7  1C03               	skipc
+   335     07D8  2FDA               	goto	u21
+   336     07D9  2FDB               	goto	u20
+   337     07DA                     u21:
+   338     07DA  2FDF               	goto	l600
+   339     07DB                     u20:
+   340     07DB                     l598:
    341                           
    342                           ;main.c: 43:             PORTCbits.RC2 = 1;
-   343     07E8  1283               	bcf	3,5	;RP0=0, select bank0
-   344     07E9  1303               	bcf	3,6	;RP1=0, select bank0
-   345     07EA  1507               	bsf	7,2	;volatile
-   346     07EB  2FEF               	goto	l599
-   347     07EC                     l35:	
-   348                           ;main.c: 44:         else
-   349                           
-   350                           
-   351                           ;main.c: 45:             PORTCbits.RC2 = 0;
-   352     07EC  1283               	bcf	3,5	;RP0=0, select bank0
-   353     07ED  1303               	bcf	3,6	;RP1=0, select bank0
-   354     07EE  1107               	bcf	7,2	;volatile
-   355     07EF                     l599:
-   356                           
-   357                           ;main.c: 47:         _delay((unsigned long)((20)*(8000000/4000.0)));
-   358     07EF  3034               	movlw	52
-   359     07F0  00F1               	movwf	??_main+1
-   360     07F1  30F1               	movlw	241
-   361     07F2  00F0               	movwf	??_main
-   362     07F3                     u47:
-   363     07F3  0BF0               	decfsz	??_main,f
-   364     07F4  2FF3               	goto	u47
-   365     07F5  0BF1               	decfsz	??_main+1,f
-   366     07F6  2FF3               	goto	u47
-   367     07F7  2FF8               	nop2
-   368     07F8  2FC6               	goto	l591
-   369     07F9  120A  118A  2800   	ljmp	start
-   370     07FC                     __end_of_main:
-   371     007E                     btemp	set	126	;btemp
-   372     007E                     wtemp0	set	126
-   373                           
-   374                           	psect	config
-   375                           
-   376                           ;Config register CONFIG @ 0x2007
-   377                           ;	Oscillator Selection bits
-   378                           ;	FOSC = HS, HS oscillator
-   379                           ;	Watchdog Timer Enable bit
-   380                           ;	WDTE = OFF, WDT disabled
-   381                           ;	Power-up Timer Enable bit
-   382                           ;	PWRTE = ON, PWRT enabled
-   383                           ;	Brown-out Reset Enable bit
-   384                           ;	BOREN = ON, BOR enabled
-   385                           ;	Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit
-   386                           ;	LVP = ON, RB3/PGM pin has PGM function; low-voltage programming enabled
-   387                           ;	Data EEPROM Memory Code Protection bit
-   388                           ;	CPD = OFF, Data EEPROM code protection off
-   389                           ;	Flash Program Memory Write Enable bits
-   390                           ;	WRT = OFF, Write protection off; all program memory may be written to by EECON control
-   391                           ;	In-Circuit Debugger Mode bit
-   392                           ;	DEBUG = 0x1, unprogrammed default
-   393                           ;	Flash Program Memory Code Protection bit
-   394                           ;	CP = OFF, Code protection off
-   395     2007                     	org	8199
-   396     2007  3FF2               	dw	16370
+   343     07DB  1283               	bcf	3,5	;RP0=0, select bank0
+   344     07DC  1303               	bcf	3,6	;RP1=0, select bank0
+   345     07DD  1507               	bsf	7,2	;volatile
+   346     07DE  2FEF               	goto	l604
+   347     07DF                     l600:
+   348     07DF  0873               	movf	main@temperature+1,w
+   349     07E0  3A80               	xorlw	128
+   350     07E1  00FF               	movwf	btemp+1
+   351     07E2  3080               	movlw	128
+   352     07E3  027F               	subwf	btemp+1,w
+   353     07E4  1D03               	skipz
+   354     07E5  2FE8               	goto	u35
+   355     07E6  304F               	movlw	79
+   356     07E7  0272               	subwf	main@temperature,w
+   357     07E8                     u35:
+   358     07E8  1803               	skipnc
+   359     07E9  2FEB               	goto	u31
+   360     07EA  2FEC               	goto	u30
+   361     07EB                     u31:
+   362     07EB  2FEF               	goto	l604
+   363     07EC                     u30:
+   364     07EC                     l602:
+   365                           
+   366                           ;main.c: 45:             PORTCbits.RC2 = 0;
+   367     07EC  1283               	bcf	3,5	;RP0=0, select bank0
+   368     07ED  1303               	bcf	3,6	;RP1=0, select bank0
+   369     07EE  1107               	bcf	7,2	;volatile
+   370     07EF                     l604:
+   371                           
+   372                           ;main.c: 47:         _delay((unsigned long)((20)*(8000000/4000.0)));
+   373     07EF  3034               	movlw	52
+   374     07F0  00F1               	movwf	??_main+1
+   375     07F1  30F1               	movlw	241
+   376     07F2  00F0               	movwf	??_main
+   377     07F3                     u57:
+   378     07F3  0BF0               	decfsz	??_main,f
+   379     07F4  2FF3               	goto	u57
+   380     07F5  0BF1               	decfsz	??_main+1,f
+   381     07F6  2FF3               	goto	u57
+   382     07F7  2FF8               	nop2
+   383     07F8  2FB9               	goto	l592
+   384     07F9  120A  118A  2800   	ljmp	start
+   385     07FC                     __end_of_main:
+   386     007E                     btemp	set	126	;btemp
+   387     007E                     wtemp0	set	126
+   388                           
+   389                           	psect	config
+   390                           
+   391                           ;Config register CONFIG @ 0x2007
+   392                           ;	Oscillator Selection bits
+   393                           ;	FOSC = HS, HS oscillator
+   394                           ;	Watchdog Timer Enable bit
+   395                           ;	WDTE = OFF, WDT disabled
+   396                           ;	Power-up Timer Enable bit
+   397                           ;	PWRTE = ON, PWRT enabled
+   398                           ;	Brown-out Reset Enable bit
+   399                           ;	BOREN = ON, BOR enabled
+   400                           ;	Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit
+   401                           ;	LVP = ON, RB3/PGM pin has PGM function; low-voltage programming enabled
+   402                           ;	Data EEPROM Memory Code Protection bit
+   403                           ;	CPD = OFF, Data EEPROM code protection off
+   404                           ;	Flash Program Memory Write Enable bits
+   405                           ;	WRT = OFF, Write protection off; all program memory may be written to by EECON control
+   406                           ;	In-Circuit Debugger Mode bit
+   407                           ;	DEBUG = 0x1, unprogrammed default
+   408                           ;	Flash Program Memory Code Protection bit
+   409                           ;	CP = OFF, Code protection off
+   410     2007                     	org	8199
+   411     2007  3FF2               	dw	16370
 
 Data Sizes:
     Strings     0
@@ -454,7 +469,7 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (0) _main                                                 4     4      0      15
+ (0) _main                                                 4     4      0      30
                                               0 COMMON     4     4      0
  ---------------------------------------------------------------------------------
  Estimated maximum stack depth 0
@@ -493,21 +508,22 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.45 build 20230818022343 
-Symbol Table                                                                                   Fri May 03 12:27:20 2024
+Symbol Table                                                                                   Fri May 03 12:30:32 2024
 
-                     l32 07C9                       l35 07EC                       u10 07CD  
-                     u11 07CC                       u20 07E8                       u21 07E7  
-                     u25 07E4                       u37 07C4                       u47 07F3  
-                    l591 07C6                      l583 07B0                      l593 07CD  
-                    l585 07B4                      l595 07DB                      l587 07B6  
-                    l597 07E8                      l589 07BF                      l599 07EF  
-                   _main 07B0                     btemp 007E                     start 0000  
-                  ?_main 0070                    _PORTB 0006                    _PORTD 0008  
-                  _TRISA 0085                    _TRISB 0086                    _TRISC 0087  
-                  _TRISD 0088                    status 0003                    wtemp0 007E  
-        __initialization 07FC             __end_of_main 07FC                   ??_main 0070  
-                 _ADCON0 001F                   _ADCON1 009F                   _ADRESH 001E  
-                 _ADRESL 009E  __end_of__initialization 07FC           __pcstackCOMMON 0070  
-             __pmaintext 07B0     end_of_initialization 07FC                _PORTCbits 0007  
-    start_initialization 07FC                ___latbits 0002               _ADCON0bits 001F  
-        main@temperature 0072  
+                     l32 07BC                       u10 07C0                       u11 07BF  
+                     u20 07DB                       u21 07DA                       u30 07EC  
+                     u31 07EB                       u25 07D7                       u35 07E8  
+                     u47 07B7                       u57 07F3                      l600 07DF  
+                    l602 07EC                      l604 07EF                      l590 07B2  
+                    l592 07B9                      l584 07A3                      l594 07C0  
+                    l586 07A7                      l596 07CE                      l588 07A9  
+                    l598 07DB                     _main 07A3                     btemp 007E  
+                   start 0000                    ?_main 0070                    _PORTB 0006  
+                  _PORTD 0008                    _TRISA 0085                    _TRISB 0086  
+                  _TRISC 0087                    _TRISD 0088                    status 0003  
+                  wtemp0 007E          __initialization 07FC             __end_of_main 07FC  
+                 ??_main 0070                   _ADCON0 001F                   _ADCON1 009F  
+                 _ADRESH 001E                   _ADRESL 009E  __end_of__initialization 07FC  
+         __pcstackCOMMON 0070               __pmaintext 07A3     end_of_initialization 07FC  
+              _PORTCbits 0007      start_initialization 07FC                ___latbits 0002  
+             _ADCON0bits 001F          main@temperature 0072  
