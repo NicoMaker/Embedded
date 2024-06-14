@@ -1,7 +1,7 @@
 #include <xc.h>
 #include <stdio.h>
 
-// Configurazione dei fuse
+// Configurazione del microcontrollore
 #pragma config FOSC = HS        // Oscillatore ad alta velocit?
 #pragma config WDTE = OFF       // Watchdog Timer disabilitato
 #pragma config PWRTE = ON       // Power-up Timer abilitato
