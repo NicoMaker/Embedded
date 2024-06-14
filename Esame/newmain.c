@@ -73,7 +73,7 @@ void main(void) {
                 uart_transmit((setPoint / 10) + '0');
                 uart_transmit('.');
                 uart_transmit((setPoint % 10) + '0');
-                uart_send_string(" �C\n");
+                uart_send_string(" � C\n");
                 __delay_ms(200);
             }
         }
@@ -85,7 +85,7 @@ void main(void) {
                 uart_transmit((setPoint / 10) + '0');
                 uart_transmit('.');
                 uart_transmit((setPoint % 10) + '0');
-                uart_send_string(" �C\n");
+                uart_send_string(" � C\n");
                 __delay_ms(200);
             }
         }
